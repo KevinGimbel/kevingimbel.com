@@ -1,0 +1,11 @@
+baseurl = "http://kevingimbel.com/"
+languageCode = "en-us"
+title = "Kevin Gimbel | Developer"
+theme = "kevingimbel"
+
+# Set permalinks, they can be content-type based!
+# Reference: http://gohugo.io/extras/permalinks/
+[permalinks]
+  # Posts should be linked under the site-root with their title.
+  post = "/:title/"
+  project = "/projects/:title/"

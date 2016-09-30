@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 1rem;
+  line-height: 1.65;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: $color-accent;
+
+    &:hover {
+      color: $color-accent--secondary;
+    }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, .h1 {
+  font-size: 2.25rem;
+}
+
+h2, .h2 {
+  font-size: 1.75rem;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.35rem;
+}
+
+h5, .h5 {
+  font-size: 1.15rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.content {
+  min-height: 60vh;
+
+  img {
+    margin: 1rem 0;
+  }
+
+  h2 {
+    margin-top: 1.15rem;
+  }
+  h3 {
+    margin-top: .5rem;
+  }
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+figure img {
+  margin: 0 !important;
+}
+
+figcaption {
+  background: #f1f1f1;
+  margin-top: -6px;
+  font-size: .75rem;
+  padding: .5rem;
+  text-align: right;
+  color: #666;
+}
+
+.page-inner {
+  padding: 2rem 0;
+}
+
+.inner, .wrap {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.inner {
+  padding: 2rem;
+}
+
+.home-section {
+  margin-bottom: 6rem;
+}
+
+
+@media all and (max-width: 80rem) {
+  .content p, .content h1, .content h2, .content h3, .content h4 {
+    padding: 0 2rem;
+  }
+}

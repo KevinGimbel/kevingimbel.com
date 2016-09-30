@@ -1,0 +1,24 @@
+{{ partial "header.html" }}
+
+<header class="article__header">
+  <div class="inner">
+    <h1 class="title">{{ .Title }}</h1>
+    <p>Estamate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <code>{{ .Params.categories }}</code></p>
+  </div>
+</header>
+
+<section class="article wrap">
+  <div class="article__content inner">
+    {{ .Content }}
+  </div>
+</section>
+
+<footer class="article__footer wrap">
+  Found an issue? <a href="http://github.com/kevingimbel/kevingimbel.com/blob/master/{{.File.Path}}">Edit this post on GitHub</a> or <a href="https://twitter.com/_kevinatari">let me know on Twitter</a>.
+</footer>
+
+{{ range $script := .Params.scripts }}
+  <script src="{{ $script }}"></script>
+{{ end }}
+
+{{ partial "footer.html" }}

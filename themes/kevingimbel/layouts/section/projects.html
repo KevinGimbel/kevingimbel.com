@@ -1,0 +1,24 @@
+{{ partial "header.html" }}
+
+<section class="page wrap">
+  <h1>{{ .Title }}</h1>
+  <p>Below you can see some projects of mine. You can see more on <a href="https://github.com/kevingimbel">GitHub</a> or <a href="http://codepen.io/kevingimbel/">CodePen</a>.</p>
+  <div class="project__wrap">
+    {{ range .Data.Pages.GroupByParam "language" }}
+    <div class="project__item">
+      <header class="project__header {{lower .Key}}">
+        <h3 id="#{{lower .Key}}" class="project__title">{{ .Key }}</h3>
+      </header>
+      <ul class="project__list">
+        {{ range .Pages }}
+        <li>
+          <a href="{{ .Permalink }}" title="Learn more about {{ .Title }}">{{ .Title }}</a>
+          <a href="{{ .Params.project_url}}" title="View {{ .Title }} on GitHub" class="project__link-extern">View on GitHub</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ partial "footer.html" }}

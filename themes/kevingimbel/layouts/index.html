@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<section id="main" class="wrap">
+
+<section class="home-section">
+  {{ range first 1 (where .Data.Pages "Section" "post") }}
+    <article class="article-home post">
+      <p class="h6">Lately I wrote about:</p>
+      {{ .Render "article-home" }}
+    </article>
+  {{ end }}
+</section>
+<section class="home-section">
+  <p class="h6">Latest Projects</p>
+  {{ range first 3 (where .Data.Pages "Section" "projects") }}
+    <article class="article-home project">
+      {{ .Render "article-home" }}
+    </article>
+  {{ end }}
+</section>
+
+{{ partial "footer.html" . }}

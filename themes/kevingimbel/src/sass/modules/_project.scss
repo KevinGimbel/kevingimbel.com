@@ -1,0 +1,52 @@
+.project__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project__item {
+  width: 33%;
+  margin: 2rem 0;
+}
+
+.project__header {
+  min-height: 10rem;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 1rem;
+
+  &.go {
+    background: #2196F3;
+    color: #fff;
+  }
+
+  &.bash {
+    background: #C6FF00;
+    color: #222;
+  }
+
+  &.javascript {
+    background: #FFC107;
+    color: #fff;
+  }
+}
+
+.project__header h3 {
+  font-size: 3rem;
+}
+
+.project__link-extern {
+  float: right;
+  font-size: .75rem;
+}
+
+.project__list {
+  list-style: none;
+
+  li {
+    padding: .5rem 1rem;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    border-top: none;
+  }
+}

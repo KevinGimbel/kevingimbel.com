@@ -1,0 +1,20 @@
+.site__header {
+  background: #263238;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.site__header h1 {
+  font-size: 4rem;
+}
+
+.site__header h2 {
+  font-size: 2rem;
+}
+
+
+@media all and (max-width: 80rem) {
+  .site__header {
+    padding: 2rem;
+  }
+}

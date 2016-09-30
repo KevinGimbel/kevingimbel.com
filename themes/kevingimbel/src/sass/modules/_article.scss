@@ -1,0 +1,22 @@
+.article-page {
+  a {
+    color: $color--article;
+  }
+}
+
+.article__header {
+  background: $color--article;
+  color: #fff;
+}
+
+.article__content {
+  margin-top: 1rem;
+}
+
+.article__footer {
+  padding: 1rem 2rem;
+}
+
+.article-home {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,7 @@
+<h3 class="h2"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<div class="article-home__body">
+  {{ .Summary | plainify | safeHTML }}
+  {{ if .Truncated }}
+  ...<a href="{{ .Permalink }}">Read more</a>
+  {{ end }}
+</div>

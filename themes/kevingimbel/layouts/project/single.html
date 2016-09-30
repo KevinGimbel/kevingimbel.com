@@ -1,0 +1,20 @@
+{{ partial "header.html" }}
+
+<header class="article__header">
+  <div class="inner">
+    <h1 class="title">{{ .Title }}</h1>
+    <a href="{{ .Params.project_url }}">Lern more on GitHub</a>
+  </div>
+</header>
+
+<section class="article wrap">
+  <div class="article__content inner">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ range $script := .Params.scripts }}
+  <script src="{{ $script }}"></script>
+{{ end }}
+
+{{ partial "footer.html" }}
