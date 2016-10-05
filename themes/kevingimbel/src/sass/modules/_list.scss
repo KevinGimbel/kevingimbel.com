@@ -14,11 +14,18 @@
 
 .list__flex {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   list-style: none;
 }
 
 .list__flex li {
   display: block;
+}
+
+@media all and (min-width: 60rem) {
+  .list__flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

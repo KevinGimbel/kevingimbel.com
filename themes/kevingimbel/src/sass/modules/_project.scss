@@ -5,10 +5,9 @@
 }
 
 .project__item {
-  width: 33%;
-  margin: 2rem 0;
+  width: 100%;
+  margin: 1rem 2rem;
 }
-
 .project__header {
   min-height: 10rem;
   display: flex;
@@ -33,6 +32,7 @@
 
 .project__header h3 {
   font-size: 3rem;
+  padding-left: 0;
 }
 
 .project__link-extern {
@@ -48,5 +48,13 @@
     background: #fff;
     border: 1px solid #f1f1f1;
     border-top: none;
+  }
+}
+
+
+@media all and (min-width: 60rem) {
+  .project__item {
+    width: 33%;
+    margin: 2rem 0;
   }
 }

@@ -1,20 +1,29 @@
 .site__header {
   background: #263238;
   color: #fff;
-  padding: 3rem 0;
+  padding: 2rem;
 }
 
 .site__header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .site__header h2 {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 
-@media all and (max-width: 80rem) {
+@media all and (min-width: 85rem) {
   .site__header {
-    padding: 2rem;
+    padding: 3rem 0;
   }
+
+  .site__header h1 {
+    font-size: 4rem;
+  }
+
+  .site__header h2 {
+    font-size: 2rem;
+  }
+
 }

@@ -48,6 +48,12 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+ol {
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .content {
   min-height: 60vh;
 
@@ -64,6 +70,10 @@ h6, .h6 {
   p + p {
     margin-top: 1rem;
   }
+}
+
+figure {
+  margin: .75rem 0;
 }
 
 figure img {
@@ -90,16 +100,19 @@ figcaption {
 }
 
 .inner {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .home-section {
   margin-bottom: 6rem;
 }
 
+.content p, .content h1, .content h2, .content h3, .content h4 {
+  padding: 0 2rem;
+}
 
-@media all and (max-width: 80rem) {
+@media all and (min-width: 85rem) {
   .content p, .content h1, .content h2, .content h3, .content h4 {
-    padding: 0 2rem;
+    padding: 0;
   }
 }

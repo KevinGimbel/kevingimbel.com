@@ -2,7 +2,7 @@
 title = "About"
 +++
 
-## Hey! My name's Kevin Gimbel. I create websites and enjoy a good tea.
+### Hey! My name's Kevin Gimbel. I am a Front-End Engineer & enjoy a good ~~tea~~ coffee.
 
 {{% figure src="/images/warsaw2016.jpg" caption="Me in Warsaw for Front-Trends 2016." %}}
 

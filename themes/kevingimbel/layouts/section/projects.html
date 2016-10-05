@@ -2,7 +2,7 @@
 
 <section class="page wrap">
   <h1>{{ .Title }}</h1>
-  <p>Below you can see some projects of mine. You can see more on <a href="https://github.com/kevingimbel">GitHub</a> or <a href="http://codepen.io/kevingimbel/">CodePen</a>.</p>
+  <p>Below you can see some projects of mine. You can see more on <a href="https://github.com/kevingimbel">GitHub</a> or <a href="http://codepen.io/kevingimbel/">CodePen</a>. Projects are grouped by language.</p>
   <div class="project__wrap">
     {{ range .Data.Pages.GroupByParam "language" }}
     <div class="project__item">
@@ -21,4 +21,5 @@
     {{ end }}
   </div>
 </section>
+
 {{ partial "footer.html" }}
