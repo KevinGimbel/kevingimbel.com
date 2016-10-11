@@ -1,13 +1,14 @@
 {{ partial "header.html" }}
 
-<section class="page wrap">
-  <h1>{{ .Title }}</h1>
-  <p>Below you can see some projects of mine. You can see more on <a href="https://github.com/kevingimbel">GitHub</a> or <a href="http://codepen.io/kevingimbel/">CodePen</a>. Projects are grouped by language.</p>
+<section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
+  <h2 id="title">{{ .Title }}</h2>
+  <p id="desc">Below you can see some projects of mine. You can see more on <a href="https://github.com/kevingimbel">GitHub</a> or <a href="http://codepen.io/kevingimbel/">CodePen</a>. Projects are grouped by language.</p>
   <div class="project__wrap">
     {{ range .Data.Pages.GroupByParam "language" }}
-    <div class="project__item">
+    <div class="project__item" aria-labeldby="{{ lower .Key }}" aria-describedby="desc-{{ lower .Key }}">
       <header class="project__header {{lower .Key}}">
-        <h3 id="#{{lower .Key}}" class="project__title">{{ .Key }}</h3>
+        <h3 id="{{lower .Key}}" class="project__title">{{ .Key }}</h3>
+        <p class="is-hidden" id="desc-{{ lower .Key }}">List of projects of mine written in {{ .Key }}</p>
       </header>
       <ul class="project__list">
         {{ range .Pages }}

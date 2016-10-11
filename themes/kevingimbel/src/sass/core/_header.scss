@@ -1,7 +1,11 @@
 .site__header {
-  background: #263238;
+  background: #0c1012;
   color: #fff;
   padding: 2rem;
+
+    a {
+      color: $color-accent;
+    }
 }
 
 .site__header h1 {

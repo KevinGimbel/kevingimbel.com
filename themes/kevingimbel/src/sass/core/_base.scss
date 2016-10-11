@@ -13,11 +13,25 @@ html, body {
 }
 
 a {
-  color: $color-accent;
+  color: $color-accent--dark;
 
     &:hover {
       color: $color-accent--secondary;
     }
+}
+
+a:focus {
+  background: $color-accent--dark !important;
+  color: #fff !important;
+}
+
+::selection {
+  color: #fff;
+  background: $color-accent--dark;
+}
+
+.is-hidden {
+  display: none;
 }
 
 img {

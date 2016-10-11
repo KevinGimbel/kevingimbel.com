@@ -1,7 +1,11 @@
 .site__footer {
-  background: #333;
+  background: #0c1012;
   color: #f1f1f1;
   padding: 2rem 0;
+
+   a {
+     color: $color-accent;
+   }
 }
 
 
