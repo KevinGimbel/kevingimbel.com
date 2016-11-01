@@ -1,0 +1,14 @@
+{{ partial "header.html" }}
+
+<section class="page wrap" aria-labeldyby="title" aria-describedby="title">
+  <h3 id="title">All posts tagged under #{{ .Title }}</h3>
+
+  <div class="article__card-list">
+    {{ range .Data.Pages }}
+      {{ .Render "card" }}
+    {{ end}}
+  </div>
+
+</section>
+
+{{ partial "footer.html" }}

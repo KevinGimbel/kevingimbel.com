@@ -1,6 +1,6 @@
-+++
-title = "About"
-+++
+---
+title: "About"
+---
 
 ### Hey! My name's Kevin Gimbel. I am a Front-End Engineer & enjoy a good ~~tea~~ coffee.
 

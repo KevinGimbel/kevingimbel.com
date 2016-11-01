@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 18px;
+}
+
 html, body {
   font-size: 1rem;
   line-height: 1.65;
@@ -70,6 +74,7 @@ ol {
 
 .content {
   min-height: 60vh;
+  padding: 2rem 0;
 
   img {
     margin: 1rem 0;

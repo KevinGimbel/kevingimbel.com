@@ -7,6 +7,7 @@
 .article__header {
   background: $color--article;
   color: #fff;
+  margin-top: -2rem;
 }
 
 .article__content {
@@ -19,4 +20,20 @@
 
 .article-home {
   margin-bottom: 2rem;
+}
+
+.article-list__divider {
+  border-top: .5rem solid $color--article;
+  margin-top: 4rem;
+}
+.article__card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.article__card {
+  margin: 1rem;
+  background: #f1f1f1;
+  border: 1px solid #aaa;
+  width: calc(50% - 2rem);
+  padding: 1rem;
 }

@@ -5,7 +5,7 @@ date: 2014-07-31T00:00:00Z
 tags:
 - css
 - frontend
-tilte: Conditional CSS
+title: Conditional CSS
 
 ---
 
@@ -15,9 +15,9 @@ i.e. pieces of CSS that serve one specific task the easiest and most known is `.
 I'd like to talk a bit about conditional CSS that I've been using in production and that I think can improve the overall
 logic of CSS.
 
-### Grids 
+### Grids
 I'd like to notice that the first example is taken from [inuit.css](http://inuitcss.com) by [Harry
-Roberts](http://csswizardry.com/). The grid itself has been adopted into [Bullgrid](http://github.com/synoa/bullgrid) 
+Roberts](http://csswizardry.com/). The grid itself has been adopted into [Bullgrid](http://github.com/synoa/bullgrid)
 which is at the moment a `em` based, stripped down and standalone version of [inuit.css
 grids](https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss). So all the kudos for the next section
 go to [Harry Roberts](http://twitter.com/csswizardry).
@@ -38,7 +38,7 @@ up the grid with a given "viewport" prefix ([see this
 function](https://github.com/csswizardry/inuit.css/blob/master/generic/_widths.scss#L121-L141)). While this creates
 quite a lot of CSS on one hand it is amazingly flexible when working with this grid. Most of the time 3 classes are
 enough to make any component of the page, or better it's container, adjust to the current viewport. I categorize this as
-"Conditional CSS" because it has a condition (the viewport prefix, e.g. small-). 
+"Conditional CSS" because it has a condition (the viewport prefix, e.g. small-).
 
 Not only is this grid amazingly simple once you get used to the naming, it is also great for prototyping inside the
 browser. If one part of the page looks a bit weird I can directly play around with all grid classes to find the perfect
@@ -74,7 +74,7 @@ change the look of elements. Consider the next example.
 {{< / highlight >}}
 
 When only looking at the result both functions do the same: They hide all `.things`. However, the conditional CSS
-approach applies a class to the element. So when looking at the code from the inspector it is clear that this element 
+approach applies a class to the element. So when looking at the code from the inspector it is clear that this element
 is hidden because of a class name. This way it is easier to find out why an element is not displayed. Also it avoids
 inline styles which always have a higher priority than everything else (as the next pen shows).
 
@@ -83,15 +83,15 @@ href='http://codepen.io/kevingimbel/pen/hgpAL/'>hgpAL</a> by Kevin Gimbel (<a
 href='http://codepen.io/kevingimbel'>@kevingimbel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-Some of the Conditional CSS classes I use are 
+Some of the Conditional CSS classes I use are
 {{< highlight css >}}
 // element is hidden
 .is-hidden {
-	display: none;	
+	display: none;
 }
 // element is displayed
 .is-displayed {
-	display: block:	
+	display: block:
 }
 // element is active (most of the time nav items)
 .active {
@@ -100,11 +100,11 @@ Some of the Conditional CSS classes I use are
 
 // used with buttons
 .has-icon {
-	// styles	
+	// styles
 }
 
 /*
- * The following basically works for all 
+ * The following basically works for all
  * viewports but it's more a hack-y thing.
  * I use it to hide/display the text inside
  *	the header of this blog.
@@ -112,7 +112,7 @@ Some of the Conditional CSS classes I use are
 @media all and (max-width: 30em) {
 	.small--is-hidden {
 		display: none;
-	}	
+	}
 
 	.small--is-displayed {
 			display: block;
@@ -121,7 +121,7 @@ Some of the Conditional CSS classes I use are
 
 /*
  * Print specific elements
- * [1]: Depending on the content and layout 
+ * [1]: Depending on the content and layout
  * 			maybe display: inline|inline-block;
 */
 
@@ -130,7 +130,7 @@ Some of the Conditional CSS classes I use are
 }
 @media print {
 	.print-only {
-		display: block; // [1]	
+		display: block; // [1]
 	}
 }
 {{< / highlight >}}
@@ -138,5 +138,5 @@ Some of the Conditional CSS classes I use are
 So far I find Conditional CSS a good idea and really like to work with it. It's easier, at least for me, to see what a
 class does and where/how it should be used. Also it's a simple use of DRY (don't repeat yourself) and [Single
 Responsibility Principle](http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/) but as
-with everything overusing it won't make your live easier. 
+with everything overusing it won't make your live easier.
 As always I appreciate feedback or improvments via [twitter](http://twitter.com/_kevinatari).

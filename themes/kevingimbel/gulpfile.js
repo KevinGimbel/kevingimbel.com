@@ -1,11 +1,12 @@
 /*
  * Loading the modules we neeed.
 */
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var uglify = require('gulp-uglify')
-var rename = require('gulp-rename')
-var prefix = require('gulp-autoprefixer')
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var prefix = require('gulp-autoprefixer');
+var rollup = require('gulp-rollup');
 
 var path = {
   src: {
@@ -35,13 +36,21 @@ gulp.task('sass', function () {
     .pipe(prefix())
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(gulp.dest(path.dest.css))
-})
+});
+
+gulp.task('js', function () {
+  gulp.src(path.src.js + '/**/*.js')
+  // transform the files here.
+  .pipe(rollup({
+    // any option supported by Rollup can be set here.
+    entry: path.src.js + '/main.js'
+  }))
+  .pipe(gulp.dest(path.dest.js));
+});
 
 gulp.task('watch', function () {
   gulp.watch(path.src.sass + '/**/*.scss', ['sass'])
-  gulp.watch(path.src.js + '**/*.js').on('change', function (event) {
-    uglify_single_file(event.path)
-  })
-})
+  gulp.watch(path.src.js + '**/*.js', ['js']);
+});
 
-gulp.task('default', ['watch', 'sass'])
+gulp.task('default', ['watch', 'sass', 'js'])

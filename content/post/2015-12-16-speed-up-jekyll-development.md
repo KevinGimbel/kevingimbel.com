@@ -4,6 +4,8 @@ tags:
 - jekyll
 - ruby
 - development
+categories:
+- coding
 title: Speed up your Jekyll workflow
 
 ---
