@@ -10,6 +10,10 @@
   margin-top: -2rem;
 }
 
+.article__header a {
+  color: #fff;
+}
+
 .article__content {
   margin-top: 1rem;
 }
@@ -21,6 +25,11 @@
 .article-home {
   margin-bottom: 2rem;
 }
+
+.article-home__body {
+  word-break: break-word;
+}
+
 
 .article-list__divider {
   border-top: .5rem solid $color--article;

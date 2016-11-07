@@ -4,6 +4,7 @@
   <div class="inner">
     <h1 class="title">{{ .Title }}</h1>
     <p>Estamate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <code>{{ .Params.categories }}</code></p>
+    <p>Tagged: {{ range .Params.tags }} <a href="/tags/{{ . }}">#{{ . }}</a> {{ end }}</p>
   </div>
 </header>
 
