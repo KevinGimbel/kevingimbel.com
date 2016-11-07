@@ -20,17 +20,17 @@ Sublime Text. I'm so used to Sublime Text and it's shortcuts, multi-cursor, easy
 Anyway, there is a way to make Sublime Text behave more vim-ish. Originally I was searching for a Plugin or something or
 a config file to get some VIM keybindings into my safe-zone Sublime Text enviroment. Turns out Sublime Test has this
 built-in. In the "ignore_packages" settings is a package called "Vintage". If this line is changed like seen below
-{{< highlight bash >}}
+```bash 
 	// ignore nothing 
 	"ignored_packages": []
-{{< / highlight >}}
+```
 Sublime Text will switch into "Vintage" mode which basically is VIM-like. It will have the default VIM modes (Command,
 Insert, Visual) and all the keybindings. By default it will still start in Insert Mode, to switch this just set the
 following inside the user settings:
-{{< highlight bash >}}
+```bash 
 	// always start/open files in Command Mode 
 	"vintage_start_in_command_mode": true
-{{< / highlight >}}
+```
 
 With these two settings Sublime Text is ready to run in Vi(m|n)tage mode. This means in particular most (or all?) Vim
 commands are available and can be used such as ci" (change in ""), x or r (delete character; replace character below the

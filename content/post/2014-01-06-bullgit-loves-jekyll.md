@@ -20,19 +20,19 @@ So basically, as soon as you have a Project on GitHub or an organization like [b
 As I always like to remember in Jekyll posts: Jekyll builds static HTML pages but isn't that static at all. There is a lot of dynamics because files can be included into others, layouts are defined through the [Front Matter](http://kevingimbel.com/jekyll-guide/first-page/) and you're basically free to create whatever Front Matter and Data you want. 
 
 The `index.html` looks like this:
-{{< highlight yaml >}}
+```yaml 
     ---
     layout: front-page
     title: 
     ---
-{{< / highlight >}}
+```
 That's it, the whole structure is loaded from a Layout file based in `/_layouts/`, this file is called `front-page.html`. This **only** holds the `<body>` content for the front-page, the header and footer are - equal like you'd do it in PHP or other languages - included from `header.html` and `footer.html` on every page. So even though it is "static", when you change `header.html` all files will get updated and the new header is available everywhere.
 
 You can work like this, with `{% include file.html %}` and Layouts in the Front Matter for every file and kind of content you like. It is even possible to create a [atom.xml](http://kevingimbel.com/atom.xml) that serves people wo like to subscribe to your posts. 
 
 However, back to the bullgit. I discovered a awesome feature about Jekyll I didn't knew before: Data handling. When you create a folder called `_data` in your root directory you can put every kind of text-based data inside a *.yml file and load it in every page of your site.
 
-{{< highlight YAML >}}
+```YAML 
 # let's assume this is members.yml
 - name: Tim
   twitter: timpietrusky
@@ -54,11 +54,11 @@ However, back to the bullgit. I discovered a awesome feature about Jekyll I didn
   github: kevingimbel
   codepen: kevingimbel
   gravatar: http://www.gravatar.com/avatar/6d391d8c3a528122f3f6c991821350ac?s=200  
-{{< / highlight >}}
+```
 
 After the file is saved you can loop through its content like:
 
-{{< highlight html >}}
+```html 
 {% raw %}
 {% for member in site.data.member %}
     <h3>{{ member.name }}</h3>
@@ -67,7 +67,7 @@ After the file is saved you can loop through its content like:
     <a href="http://codepen.io/{{ member.codepen }}">{{ member.codepen }}</a>
 {% endfor %}
 {% endraw %}
-{{< / highlight >}}
+```
 
 That's it, the result is a `h3` for every member holding its name and 3 links holding the Twitter, Personal Website and CodePen URL, this way new members can be added easily - only one of us has to edit the `members.yml` file and the page gets updated a few seconds after.
 
@@ -77,7 +77,7 @@ As I mentioned above we're using GitHub's API to get all our repos on the front-
 
 As I always do I avoided jQuery for this because I think it is a waste of Requests to load jQuery if I only use a minimal of its functionality. So I wrote the Ajax request by hand. The comments describe what goes one. 
 
-{{< highlight javascript >}}
+```javascript 
     // Loading a new Ajax Request and saving it
     // to the variable xml
     var xml = new XMLHttpRequest();
@@ -155,11 +155,11 @@ As I always do I avoided jQuery for this because I think it is a waste of Reques
 
     // sending data
     xml.send();
-{{< / highlight >}}
+```
 
 Another piece if JavaScript is used to add the Script after the DOM is fully loaded, as suggested by [Tim](http://twitter.com/timpietrusky) to speed up the overall loading speed. 
 
-{{< highlight javascript >}}
+```javascript 
     // Add a script element as a child of the body
     function downloadJSAtOnload() {
         var element = document.createElement('script');
@@ -175,6 +175,6 @@ Another piece if JavaScript is used to add the Script after the DOM is fully loa
     } else {
         window.onload = downloadJSAtOnload;
     }
-{{< / highlight >}}
+```
 
 Those are just a few of the benefits of Jekyll and, because we're a "GitHub only" organization we switched so it's easier to scale the site. Building a Blog would now only take a some time because we're already running Jekyll and just have to add one more layout. That's it, the basics of our brand-new [bullgit](http://bullg.it) page.

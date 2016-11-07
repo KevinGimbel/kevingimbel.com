@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Kevin Gimbel | Developer"
 theme = "kevingimbel"
 
+pygmentsstyle = "github"
+pygmentsuseclasses = true
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
 [permalinks]

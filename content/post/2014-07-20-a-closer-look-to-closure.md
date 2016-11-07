@@ -19,7 +19,7 @@ issue](https://github.com/kevingimbel/kevingimbel.github.io/issues?page=1&state=
 
 Consider the following example
 
-{{< highlight javascript >}}
+```javascript 
 var x = 5;
 
 (function(){
@@ -27,13 +27,13 @@ var x = 5;
 }());
 
 console.log(x);
-{{< / highlight >}}
+```
 
 What value will `x` have when logged to the console? 5 or 10? The correct answer is 5, because inside the immediate
 executing function `var x` does not reference the previously defined `var x`. They're both standalone and do not effect
 each other. Let's try this again and see what happens now
 
-{{< highlight javascript >}}
+```javascript 
 var x = 5;
 
 (function() {
@@ -41,7 +41,7 @@ var x = 5;
 }());
 
 console.log(x);
-{{< / highlight >}}
+```
 
 What value will `x` have now? Still 5, because it's the same function but we only left the `var` keyword? Nope, now `x`
 inside the immediate executing function references the previously defined `var x` and will update it's value, so
@@ -53,12 +53,12 @@ perfectly fine.
 So what happens if we pass `x`, which is 10 now, to the immediate executing function and declare 'x = 15' inside the
 functions body? Will `x` become 15 or stay 10?
 
-{{< highlight javascript >}}
+```javascript 
 // x is 10 at this point
 (function(x){
 	x = 15;
 }(x));
-{{< / highlight >}}
+```
 
 As the result shows, x is still 10. But wait, wasn't it supposed to be overridden if we don't declare `var x = 15`? Well
 that is true, but since we pass x as a parameter, x is "re-defined" as a local variable and, inside the functions body, it is
@@ -73,7 +73,7 @@ href='http://codepen.io/kevingimbel'>@kevingimbel</a>) on <a href='http://codepe
 
 What can it do? Good stuff. Closures can help to organize code and keep the global namespace clear. In general one shouldn't write variables into the global namespace because they're almost asking to be overriden or changed. Let's say one writes a function like this.
 
-{{< highlight javascript >}}
+```javascript 
 var assert = function(con, msg) {
   if(!con) {
     console.error(msg);
@@ -81,7 +81,7 @@ var assert = function(con, msg) {
     console.log(msg);
   }
 }
-{{< / highlight >}}
+```
 
 That's a super simple assert function to see if a statment (`con`dition) is true or false. If it's false we'll log a console.error(), if not we'll log a normal console.log() statement. This is great and perfectly fine unless someone else
 tries to use a function with the same name. Then there'll be a "conflict" and the last declared function overrides the other. (In this example I'll use a function called myFunction)
@@ -92,7 +92,7 @@ href='http://codepen.io/kevingimbel'>@kevingimbel</a>) on <a href='http://codepe
 
 So still, what can closure do for me? It can save my declared functions - inside a closure. So far all closure examples were immediate executing function, but Objects also create closures, assigning all there properties to a specific "namespace".
 
-{{< highlight javascript >}}
+```javascript 
 var myFunction() = function() {
   return true;
 }
@@ -102,7 +102,7 @@ var myNamespace = {
     return false;
   }
 }
-{{< / highlight >}}
+```
 This way we introduce one variable to the global scope: myNamespace and keep all the functions inside this scope.
 Therefore, the myFunction() is still accessable within the scope and has the expected results, no matter who
 declares myFunction in the globale scope.

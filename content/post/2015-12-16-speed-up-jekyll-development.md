@@ -20,13 +20,13 @@ I was researching how to speed up a Jekyll site and if there was any news or wha
 $ (sudo) apt-get install bundler
 ```
 
-{{< highlight ruby >}}
+```ruby 
 # The Gemfile
 source 'https://rubygems.org'
 gem 'guard-jekyll-plus'
-{{< / highlight >}}
+```
 
-{{< highlight ruby >}}
+```ruby 
 # The Guardfile
 # Taken directly from https://github.com/imathis/guard-jekyll-plus
 
@@ -35,7 +35,7 @@ ignore /^_site/ # NOTE: this can interfere with Guard::LiveReload
 guard "jekyll-plus", :serve => true do
   watch /.*/
 end
-{{< / highlight >}}
+```
 
 The `Gemfile` - which seems to be a list of dependencies, similar to the `dependencies` list in a `package.json` file for Node - is probably the most basic representation of such a file. I first put in only the `gem 'guard-jekyll-plus'` line but then it started to throw errors and said I need to define a source - which I then did. Case closed, moving on.
 

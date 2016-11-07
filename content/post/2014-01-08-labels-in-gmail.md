@@ -18,10 +18,10 @@ However, a dialog pops up where you can enter a bunch of stuff: From, To, Subjec
 
 So the rule I'd define here for the subject would be the following: 
 
-{{< highlight bash >}}
+```bash 
  # Subject
  "Project X" OR project-x.com OR "[Project X" OR "Project-X"
-{{< / highlight >}}
+```
 
 The **OR** tells GMail to look for any of these Subject lines and put a label on it. The quotes are only used if there's a space between the words.
 This rule covers the CallTracker as well as the other eMail Subjects so that everything gets sorted automatically into it's own Label view. I also try to match the Brand color with the Label color to have a visual difference for myself. 

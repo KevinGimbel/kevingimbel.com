@@ -20,24 +20,24 @@ Sass enables you to use Variables, Functions and Mixins inside your CSS. This co
 Before we start I want you to notice something important about Sass: Sass runs on ruby so you have to install Ruby if it's not (Yeah Windows, I'm looking in your direction!) - on Mac and Linux Ruby should be installed. All code blocks starting with `$` need to be inputed into a Terminal (without the *$*!). On OS X and Linux you may need to put a `sudo` command before every command prompt.
 
 Simply check your ruby version by typing the following
-{{< highlight bash >}}
+```bash 
 $ ruby --version
 ruby 1.9.3p194 (2012-04-20 revision 35410) [i686-linux]
-{{< / highlight >}}
+```
 
 ### Installation
 You've maybe tried to install Sass previously and maybe it is still installed.
-{{< highlight bash >}}
+```bash 
 # checking the installed Sass Version
 $ sass --version
 # If up to date the output (as of today, 10/2/13) is
 Sass 3.2.9 (Media Mark)
-{{< / highlight >}}
+```
 
 If you get an error such as "command not found" Sass is not installed, so we start from 0.
-{{< highlight bash >}}
+```bash 
 $ gem install sass
-{{< / highlight >}}
+```
 
 Your Terminal will now show you the download and install process for Sass, depending on your internet connection this may take a while.
 After things are finished we'll skip the step of testing Sass directly or using it on its own - trust me here, it's way better to install Compass first. 
@@ -45,22 +45,22 @@ After things are finished we'll skip the step of testing Sass directly or using 
 ### Compass
 Compass is a Framework for Sass that comes with a ton of build in Mixins and Functions that you'll love. I'm using compass for every project - no matter if small or large.
 
-{{< highlight bash >}}
+```bash 
 # updating the system first so everything is running correctly
 $ gem update system
 $ gem install compass
-{{< / highlight >}}
+```
 
 After compass is installed simply head over to your Local Web Direction (in my case this is `var/www/`) and run 
 
-{{< highlight bash >}}
+```bash 
 $ compass create myproject
-{{< / highlight >}}
+```
 
 It doesn't matter what you call `myproject` - I've only used this command once in my life. Anyway this will create a config.rb file that you should open next.
 
 The `config.rb` is well commented, below you can see my file (just in case you don't edit the wrong file by accident)
-{{< highlight ruby >}}
+```ruby 
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
@@ -85,17 +85,17 @@ javascripts_dir = "assets/js"
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-{{< / highlight >}}
+```
 
 I changed the path (`css_dir`,`sass_dir`,...) so that they match my standard folder setup for projects.I do also always compress my files by changing the `output_style` to `:compressed`.
 
-{{< highlight bash >}}
+```bash 
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :compressed
-{{< / highlight >}}
+```
 
 The `config.rb` is essential for running Compass. You have to Copy and Paste it into every root direction of your project. See and example below:
-{{< highlight bash >}}
+```bash 
 # lets say this is the folder var/www/my-new-project
 # this is the root of your project where your config.rb
 # needs to be placed - NOT inside assets/css as many think!
@@ -113,17 +113,17 @@ The `config.rb` is essential for running Compass. You have to Copy and Paste it 
 '- index.html
 '- config.rb
 #   '- there it is, the config.rb!
-{{< / highlight >}}
+```
 
 Sass and Compass are now installed and ready to use. This is, in my opinion, best made via the good old Terminal!
 
 So let's navigate to our folders and run our first command. 
-{{< highlight bash >}}
+```bash 
 # switching to our project folder
 $ cd var/www/my-new-project
 # telling compass to compile our files
 $ compass watch
-{{< / highlight >}}
+```
 
 Compass is now watching for changes and everytime you save your `style.scss` it will automatically create an style.css out of it. Still wondering what all of this is about? 
 
@@ -131,43 +131,43 @@ Compass is now watching for changes and everytime you save your `style.scss` it 
 
 Let's start with Variables because I assume you know what they are and have already seen variables in other programming languages.
 
-{{< highlight scss >}}
+```scss 
 // Variables start with a $, e.g.
 $main-color: #85c226;
-{{< / highlight >}}
+```
 
 Variables must be declared **before** they're used, that's why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
 To use a variable you simply write it to the place you want it to be used. Logical, isn't it?
 
-{{< highlight scss >}}
+```scss 
 $main-color: #85c226;
 
 .my-class {
     border-top: 1px solid $main-color;
 }
-{{< / highlight >}}
+```
 
 The above snipped will be compiled to
 
-{{< highlight css >}}
+```css 
 .my-class {
     border-top:1px solid #85c226;
 }
-{{< / highlight >}}
+```
 
 Basically that's it. You can store Strings, Colors, and other variables inside a variables. More on variables can be found inside the [Sass Docs](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#variables_).
 
 ### Mixins
 
 Mixins are getting a little bit more interesting. They're snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:
-{{< highlight scss >}}
+```scss 
 // import everything that compass has
 @import "compass";
 // import special library (e.g. css3)
 @import "compass/css3";
-{{< / highlight >}}
+```
 
-{{< highlight scss >}}
+```scss 
 // creating a mixin
 @mixin border-radius($r) {
     -webkit-border-radius:$r;
@@ -182,11 +182,11 @@ Mixins are getting a little bit more interesting. They're snippets of code you c
     height:auto;
     @include border-radius(5px);
 }
-{{< / highlight >}}
+```
 
 The mixin can be created once and then be reused everywhere inside your style.scss - it'll save you a lot of writing whenever you have to apply a border to an object. The `border-radius()` mixin is also build-in to Compass. The output in style.css will be as following:
 
-{{< highlight css >}}
+```css 
 .my-class {
     width:20em;
     height:auto;
@@ -195,10 +195,10 @@ The mixin can be created once and then be reused everywhere inside your style.sc
     -ms-border-radius:5px;
     -o-border-radius:5px;
 }
-{{< / highlight >}}
+```
 
 There are more super useful build in function in Sass. Some of my favorite are `darken()` and `lighten()` for colors.
-{{< highlight scss >}}
+```scss 
 $my-color: red;
 $my-color--dark: darken($my-color,10%);
 // this will produce a hexadecimal code (e.g. #132644) of a 
@@ -206,12 +206,12 @@ $my-color--dark: darken($my-color,10%);
 // syntax: 
 # lighten(color,percent)
 # darken(color,percent)
-{{< / highlight >}}
+```
 
 ### Structure, Files and Folders
 Before this Guideline to Sass ends I want to talk about structures, files and folders. Compass is able to watch a whole directory of files so you can go totally crazy by striping down your CSS file into a lot of small files. Your css folder could look like this:
 
-{{< highlight bash >}}
+```bash 
 '-css
     '_includes
         '- _article.scss
@@ -224,7 +224,7 @@ Before this Guideline to Sass ends I want to talk about structures, files and fo
         '- _mixins.scss
     '- style.scss
     '- style.css
-{{< / highlight >}}
+```
 
 The amazing thing about Compass is: every file that starts with `_` is not compiled. So in the above folder tree there's still only `style.scss` that will be compiled - but all the others can be included. **Wow but what about performance with all those files?** you'll maybe ask yourself? The point is: There's still just one file, the style.*css* that will be included to the page later - so all the other files only exist locally on your computer. 
 If you want to have an example what the `style.scss` would look like, here's the one I [used for my blog](https://github.com/kevingimbel/kevingimbel.github.io/blob/v1/assets/css/style.scss).

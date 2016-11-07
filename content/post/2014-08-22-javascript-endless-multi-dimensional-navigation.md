@@ -10,7 +10,7 @@ title: Endless Multi-Dimensional Navigation
 
 The past I decided to get my head around multi-dimensional navigations, like navigations that can have (endless) sub navigations nested inside them and so I started to try some ideas on [CodePen](http://codepen.io). My first idea was to have a trigger element that, when clicked, triggeres the nearest Sub Navigation to activate it (e.g. giving it an `open` class). The JavaScript for this looks like this:
 
-{{< highlight js >}}
+```js 
 var d = document,
     trigger = d.querySelector('#trigger'),
     subNav = trigger.parentNode.querySelector('.sub-nav');
@@ -19,13 +19,13 @@ trigger.addEventListener('click', function(e) {
   e.preventDefault(); // cancels reload on <a> tags
   subNav.classList.toggle('open');
 });
-{{< / highlight >}} 
+``` 
 
 So with this, each time the trigger is clicked the sub navigation will get the class applied or removed
 (`classList.toggle()`). The `subNav` class is markup related, because the trigger is inside a `<li>`, as well as the sub
 nav, so `this.parentNode` will return the `<li>` element.
 
-{{< highlight html >}}
+```html 
 <ul>
   <li>
     <span id="trigger">+</span> <!-- this.parentNode returns the <li>
@@ -34,11 +34,11 @@ nav, so `this.parentNode` will return the `<li>` element.
       </ul>
   </li>
 </ul>
-{{< / highlight >}}
+```
 
 So the basic markup for navigations is now like this
 
-{{< highlight html >}}
+```html 
  <ul class="my-nav-wrapper-class">
     <li data-id="1"> Sub nav <span class="xy" data-id="1">+</span>
       <ul class="sub-nav" data-id="1">
@@ -50,7 +50,7 @@ So the basic markup for navigations is now like this
       </ul>
     </li>
  </ul>
-{{< / highlight >}} 
+``` 
 One of the most important things here is the `data-id` attribute which groups the navigations, triggers and (endless)
 sub navigations together and is used to reference each of them.
 

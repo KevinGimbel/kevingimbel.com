@@ -16,7 +16,7 @@ MVC-like I  believed there would be an easy way to pass email addresses to the C
 so, and I'm happy if someone finds a better way!
 
 I managed to set the different emails in the config.xml (located in `/mymodule/etc/config.xml`) like so
-{{< highlight xml >}}
+```xml 
  # ... Default Block within the <config> block
 	<default>
 		<email>
@@ -36,22 +36,22 @@ I managed to set the different emails in the config.xml (located in `/mymodule/e
 		</args>
 	</company_contactform_contact>
 </routers>
-{{< / highlight >}}
+```
 
 This way the variables can be easily changed inside the `config.xml`, later they are retrieved (in the fronend or inside
 the Controller.php) with this code
 
-{{< highlight javascript >}}
+```javascript 
 	$email = Mage::getStoreConfig('email/contact');
 	$email = Mage::getStoreConfig('email/support');
 	$email = Mage::getStoreConfig('email/yetanotheremail');
-{{< / highlight >}}
+```
 
 Those store configs are only accessable from within this Model and its View, so in `compare.phtml` this would throw an error.
 Next thing I needed was a `switch()` to determine in what view I am. Again, I'm pretty sure there is a better way of
 handling this.
 
-{{< highlight javascript >}}
+```javascript 
  /* This returns the name set for the Router in the config.xml.
 	* (Between <routers> and </routers>
  */
@@ -74,7 +74,7 @@ handling this.
 				$email = Mage::getStoreConfig('email/fallback');
 				break;
 	}
-{{< / highlight >}}
+```
 
 The fallback is used for the case of no match - it should not happen but it still can happen, so it's always save to
 have a fallback. In this case it just goes to the generic info eMail of the client.

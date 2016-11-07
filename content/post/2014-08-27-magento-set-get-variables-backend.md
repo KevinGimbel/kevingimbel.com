@@ -21,18 +21,18 @@ That was easy and fair enough I thought and so I gave it a try. First however I 
 `app/code/community/Synoa` (*community* because this can be reused and is not directly project specific). My folder
 structure is really simple since I don't need much:
 
-{{< highlight bash >}}
+```bash 
 -app/code/community
  -Synoa
   -FeaturedProducts
    -etc
     -config.xml
     -system.xml
-{{< / highlight >}}
+```
 
 In `config.xml` is the default Module configuration. In my case the following XML.
 
-{{< highlight xml >}}
+```xml 
 <?xml version="1.0" encoding="UTF-8"?>
  <config>
    <modules>
@@ -41,13 +41,13 @@ In `config.xml` is the default Module configuration. In my case the following XM
      </Synoa_FeaturedProducts>
    </modules>
 </config>
-{{< / highlight >}}
+```
 
 The really important and **amazing** part happens in `system.xml`. The way of adding fields as shown below shows how
 amazingly flexible Magento can be. When I tried it out and found that it worked right away I was really impressed.
 Magento's Module System, where the Module Name is equal to the folder it is in, e.g. `Mage_Core_Block_Html_Link` is in
 `Mage/Core/Block/Html/Link.php`, also applies to this XML configuration.
-{{< highlight xml >}}
+```xml 
 <config>
 <sections>
   <catalog>
@@ -74,28 +74,28 @@ Magento's Module System, where the Module Name is equal to the folder it is in, 
   </catalog>
 </sections>
 </config>
-{{< / highlight >}}
+```
 
 Well quite a lot of stuff happens here, let's break that down. 
 
 ### Sections
-{{< highlight xml >}}
+```xml 
  <sections>
   <catalog>
   </catalog>
  </sections>
-{{< / highlight >}}
+```
 
 This part defines in what menu (in the backend on the left) the new fields will be inserted. In this case it's the
 Catalog Menu and there the first Sub-Menu point (which is also named Catalog). 
 
 ### Groups
-{{< highlight xml >}}
+```xml 
 <groups>
  <group_name>
  </group_name>
 </groups>
-{{< / highlight >}}
+```
 
 Groups define the "containers" for settings. These are the boxes on the right part of the screen. Because describing it
 is rather stupid, here's a picture of the new admin menu and it's container (the group).
@@ -107,7 +107,7 @@ available, either in `translate.csv` or `myCompany_MyModule.csv` - that's up to 
 
 Inside the container is more stuff that could need some explanation. 
 
-{{< highlight xml >}}
+```xml 
 <my_namespace>
   <label>Featured Products</label>
   <frontend_type>text</frontend_type>
@@ -116,7 +116,7 @@ Inside the container is more stuff that could need some explanation.
   <show_in_website>1</show_in_website>
   <show_in_store>1</show_in_store>
 <my_namespace/>
-{{< / highlight >}}
+```
 
 * `label` - The label to show at the top (headline)
 * `frontend_type`- type of the field in the frontend
@@ -126,7 +126,7 @@ Inside the container is more stuff that could need some explanation.
 * `show_in_store` - available in default store view
 The show tags determine in what store config "scope" (after setting it in the top right) the option is available. 
 
-{{< highlight xml >}}
+```xml 
 <fields>
   <product_skus translate="label">
     <label>Insert product skus here (csv, e.g 123, 144, 255)</label>
@@ -137,7 +137,7 @@ The show tags determine in what store config "scope" (after setting it in the to
     <show_in_store>1</show_in_store>
   </product_skus>
 </fields>
-{{< / highlight >}}
+```
 
 * `label` - Label on the left (field description)
 * `sort_order`- position _inside_ the list
@@ -148,9 +148,9 @@ I'm not entirely sure what the store variables do here, but I guess they configu
 And that's it. Without a single line of PHP fields can be added to the backend in Magento. Retrieving the values of
 those fields is also easy, as the following example shows.
 
-{{< highlight php >}}
+```php 
 <?php echo Mage::getStoreConfig('catalog/featured_products/product_skus'); ?>
-{{< / highlight >}}
+```
 
 The logic here is simply `section/groupname/fieldname`. This fits pretty good with the previously mentioned folder
 structure of Magento. 

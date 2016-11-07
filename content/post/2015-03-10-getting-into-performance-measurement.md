@@ -107,7 +107,7 @@ be loaded before the CSS is rendered - therefore no delay.
 Below is the function that'll load the fonts via a script tag that as the
 `async` attribute set. 
 
-{{< highlight js >}} 
+```js  
 WebFontConfig = {
   google: { families: [ 'Open+Sans:400,300,600:latin' ] }
 };
@@ -122,7 +122,7 @@ WebFontConfig = {
  document.getElementsByTagName('script')[0];
  s.parentNode.insertBefore(wf, s);
  })(); 
-{{< / highlight >}}
+```
 
 > Font rendering from within CSS can block the overall load time of the CSS
 > file. Splitting out the fonts from the CSS and loading them via JavaScript (if
@@ -137,7 +137,7 @@ a specific WordPress Hoster our access to server features is mainly limited to
 their admin interface and using the `.htaccess` - which is what I did.
 
 #### Expire Dates
-{{< highlight html >}}
+```html 
 # caching for 1 month
 <IfModule mod_expires.c>
  ExpiresActive On
@@ -154,7 +154,7 @@ their admin interface and using the `.htaccess` - which is what I did.
     Header set Cache-Control "public"
   </FilesMatch>
 </IfModule>
-{{< / highlight >}}
+```
 
 #### Compression with mod_deflate
 With this snippet above we tell the server to cache certain file types by 1
@@ -162,7 +162,7 @@ month (if they don't change of course). This way the server can sent back the
 files from its cache instead of re-generating the files all the time. Next I
 used `mod_deflate` to compress the files before they are sent to the client. 
 
-{{< highlight html >}}
+```html 
 # Deflate Compression by FileType
 <IfModule mod_deflate.c>
  AddOutputFilterByType DEFLATE text/plain
@@ -177,7 +177,7 @@ used `mod_deflate` to compress the files before they are sent to the client.
  AddOutputFilterByType DEFLATE application/javascript
  AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
-{{< / highlight >}}
+```
 
 Now all our files are cached and gzip (compressed). Additionally our Hoster has
 its own cache (Varnish) which should benefit to our sites overall performance, too.
@@ -192,7 +192,7 @@ We've been using our own delayed load for JavaScript assets ever since I started
 working at [Synoa](http://synoa.de). We use the following function to include
 our minified JavaScript after the DOM is loaded, if possible.
 
-{{< highlight js >}}
+```js 
 var loadAfterDom = function() {
   var script = document.createElement('script');
   var body = document.body;
@@ -210,7 +210,7 @@ if(window.addEventListener) {
 } else {
   window.onload = loadAfterDom;  
 }
-{{< / highlight >}}
+```
 
 This little script loads the `main.min.js` file after the DOM is constructed so
 it doesn't block the rendering of the page.

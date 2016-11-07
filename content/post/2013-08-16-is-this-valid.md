@@ -10,7 +10,7 @@ I recently stumbled upon the `:valid` and `:invalid` class for input fields. It 
 
 Anyway I thought this is a handy little helper that I could give a try so I started working around with it, checking what I can do and what I can't. 
 
-{{< highlight css >}}
+```css 
 .contact__form--email {
  
   &:valid {
@@ -21,7 +21,7 @@ Anyway I thought this is a handy little helper that I could give a try so I star
     color:red;
   }
 }
-{{< / highlight >}}
+```
 
 Above you see the basic markup for a simple use case of `:valid` and `:invalid`. You can apply everything you want so far I've tested. In my opinion `color` and `border` are the best and most basic use cases where this makes sense.
 
@@ -32,7 +32,7 @@ When the user starts typing the color will be red, as soon as he writes `yournam
 
 Mozilla's Firefox and Google Chrome behave the same way, both trigger the `:valid` class as soon as there is one character behind the @ mark. I wonder if this is specified by W3C - and now I ask: Is this really the best way to handle `:valid` and `:invalid` pseudo classes? Wouldn't it be better to wait until the user types at least one dot followed by a letter **after** the user already wrote an @ mark? This would, in all cases, make sure the email is set up correctly.
 
-{{< highlight bash >}}
+```bash 
 # Firefox and Chrome trigger :valid 
 # at this point
 #       |
@@ -42,7 +42,7 @@ Mozilla's Firefox and Google Chrome behave the same way, both trigger the `:vali
 # 2 letters have been entered
 # because chances that the email
 # is valid are much higher here
-{{< / highlight >}}
+```
 
 At least you have to check the email via JavaScript or PHP with RegEx to make sure it is valid but it would be a nice UX feature to have a visual feedback that checks the email so a user sees that the inputed email is correct - the :valid class doesn't provide this yet because it triggers to early so there is no "guarantee" the email is correct.
 

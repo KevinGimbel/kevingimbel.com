@@ -18,12 +18,12 @@ super handy once your project get's bigger! Anyway, here's how to implement them
 
 First of all, you need to install  the different gulp plugins (and gulp, if you haven't).
 
-{{< highlight bash >}}
+```bash 
 $ npm install --save-dev gulp-sass gulp-sourcemaps gulp-autoprefixer
-{{< / highlight >}} 
+``` 
 
 After everything is installed we'll create the basic Gulp setup.
-{{< highlight js >}}
+```js 
   var gulp = require('gulp'),
       sass = require('gulp-sass'),
       prefix = require('gulp-autoprefixer'),
@@ -33,13 +33,13 @@ After everything is installed we'll create the basic Gulp setup.
         scss: './skin/frontend/my-theme/default/scss/',
         css: './skin/frontend/my-theme/default/css/'
       }
-{{< / highlight >}}
+```
 
 Next the tasks will be created, I split them into 2, one for Sass and Source Maps and one for
 Autoprefixer. It's important to create the Source Maps _before_ using Autoprefixer, otherwise the line numbers won't be
 right. This happen because Autoprefixer adds more properties to your compiled CSS!
 
-{{< highlight js >}}
+```js 
 gulp.task('sass', function() {
 gulp.src( path.scss + 'styles.scss')
   .pipe(maps.init())
@@ -53,7 +53,7 @@ gulp.src( path.css )
   .pipe(prefix('last 5 versions', '> 1%', 'ie8'))
   .pipe(gulp.dest( path.css ));  
 });
-{{< / highlight >}}
+```
 
 
 First of all source maps need to be initalized, next a compressed css file from the SCSS files is created, the source
@@ -76,10 +76,10 @@ image to view it in full-size.
 
 In case you don't want your source maps in production you could split everything into 3 taks and run them in the order
 `["sass", "sourcemaps", "autoprefix"]` using `gulp.task()` and then later have the following production task.
-{{< highlight js >}}
+```js 
 gulp.task('production', ['sass', 'autoprefix'];
 
 // Use the following command to keep out Source Maps.
 // $ gulp production
-{{< / highlight >}}
+```
 

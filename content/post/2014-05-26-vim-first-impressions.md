@@ -10,7 +10,7 @@ title: Vim - first impression
 ---
 
 When I first looked at Vim it was a very short expierence that was literally as followes
-{{< highlight bash >}}
+```bash 
 	# from the command line
 	vim test.md
 	*vim opens*
@@ -19,7 +19,7 @@ When I first looked at Vim it was a very short expierence that was literally as 
 	"How do I even close this?!"
 	*opens browser, googles "how to close VIM"*
 	ESC + :q
-{{< / highlight >}}
+```
 
 That was it and that was my Vim expierence for quite some time. However, lately I see more and more people talking
 about Vim being the single best editor for everything - no matter what language one writes. A site notice here: I
@@ -46,7 +46,7 @@ So basically everything in Vim is bound to keys and those keys can be combined (
 there's even more power inside Vim when it comes to text manipulation, navigation, replacements, etc. Anyway, as long as
 I haven't found out what stuff is possible I'll just share my `.vimrc` with you. 
 
-{{< highlight vim >}}
+```vim 
 	{% raw %}
 	" vim:fdm=marker
 	set nocompatible " required by Vundle
@@ -105,7 +105,7 @@ I haven't found out what stuff is possible I'll just share my `.vimrc` with you.
 	set nobackup
 	set noswapfile
 	{% endraw %}
-{{< / highlight >}}
+```
 
 So that's quite some stuff I guess. First of all, [Vundle](https://github.com/gmarik/Vundle.vim) is the Plugin manager
 for Vim, there are others but I chose this one because it is 99% written in VimL. This little thingy helps me keep track

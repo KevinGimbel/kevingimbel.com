@@ -21,10 +21,10 @@ The past week I've done all my daily work at [Synoa](http://synoa.de) in VIM. My
 sections which I'll explain below.
 
 ### Plugins
-{{< highlight vim >}}
+```vim 
 " Enable Pathogen to manage plugins
 execute pathogen#infect()
-{{< / highlight >}}
+```
 
 I've replaced Vundle with Pathogen to load Plugins because to my (still noobish) eye it looks better and more easy to
 use. Pathogen auto-loads all Plugins that are placed inside `~/.vim/bundle/` - currently the only Plugin I'm using is
@@ -33,7 +33,7 @@ because of the different modes and key mappings when you come from a Sublime Tex
 hit `[CTRL]+[C]+[,]` after every Emmet snippet - beside that it works as expected.
 
 ### Writin style and syntax
-{{< highlight vim >}}
+```vim 
 " enable syntax highlighting
 syntax on
 
@@ -58,7 +58,7 @@ set tw=120 " text width
 set colorcolumn=120 " adds a ruler to the right side of Vim
 set scrolloff=15
 set wmh=0
-{{< / highlight >}}
+```
 
 I must admit that most of the VIM syntax and writing styles is still copy pasted from all over the Internet. In the
 first block I'm setting the colorshemes and basic VIM UI (show mode, show CMD, have a mode line; use a ruler). In the
@@ -68,7 +68,7 @@ down to the end of the screen and the wmh (window min height) - this one is used
 space.
 
 ### Key mappings
-{{< highlight vim >}}
+```vim 
 " The <Enter> command behind each mapping executes the
 " command directly. Otherwise the command would be written
 " to the VIM 'console' thing
@@ -86,7 +86,7 @@ map <C-K> <C-W>k<C-W>_
 
 " auto-expand path (opening files like :tabedit %%/)
 cabbr <expr> %% expand('%:p:h')
-{{< / highlight >}}
+```
 Mostly my key mappings have stayed the same, F5 is used for spell checking (which comes very handy!), F2 and F3 are used
 to navigate between open tabs. The important part here is the `<Enter>` behind each command. This way the command will
 be executed immediately, otherwise it is written into the little command line at the bottom of VIM.
@@ -101,11 +101,11 @@ With this little helper I can type `:tabedit %%/` and once I write the `/` the p
 directory.
 
 ### No backups, no swap!
-{{< highlight vim >}}
+```vim 
 " No backups and no swap file
 set nobackup
 set noswapfile
-{{< / highlight >}}
+```
 
 The last part is still the same. Since I'm using git and branches for everything I don't need any kind of backup or swap
 file since I could always revert anything. 

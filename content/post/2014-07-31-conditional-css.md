@@ -23,13 +23,13 @@ grids](https://github.com/csswizardry/inuit.css/blob/master/objects/_grids.scss)
 go to [Harry Roberts](http://twitter.com/csswizardry).
 One of the most amazing things about inuit.css Grids is its use of viewport-name based classes.
 
-{{< highlight html >}}
+```html 
 <div class="gw">
 <div class="g one-third small-one-whole"></div>
 <div class="g one-third small-one-whole"></div>
 <div class="g one-third small-one-whole"></div>
 </div>
-{{< / highlight >}}
+```
 
 The above example creates a 3 column grid that'll turn into 3 full-width (one-whole) containers once the viewport
 "small" is reached. To achieve this behavior Harry wrote an amazingly logical [mixin to set up the
@@ -50,7 +50,7 @@ with JavaScript. In general Conditional CSS should be prefered over applying sty
 is it cleaner to devide functions and styles, it is also easier to debug, especially when immediate executing functions
 change the look of elements. Consider the next example.
 
-{{< highlight js >}}
+```js 
 // hide all things on load using element.style
 (function() {
 	var allThings = document.querySelectorAll('.things');
@@ -66,12 +66,12 @@ change the look of elements. Consider the next example.
 			allThings.classList.add('is-hidden');
 		}
 }());
-{{< / highlight >}}
-{{< highlight css >}}
+```
+```css 
 .is-hidden {
 	display: none;
 }
-{{< / highlight >}}
+```
 
 When only looking at the result both functions do the same: They hide all `.things`. However, the conditional CSS
 approach applies a class to the element. So when looking at the code from the inspector it is clear that this element
@@ -84,7 +84,7 @@ href='http://codepen.io/kevingimbel'>@kevingimbel</a>) on <a href='http://codepe
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 Some of the Conditional CSS classes I use are
-{{< highlight css >}}
+```css 
 // element is hidden
 .is-hidden {
 	display: none;
@@ -133,7 +133,7 @@ Some of the Conditional CSS classes I use are
 		display: block; // [1]
 	}
 }
-{{< / highlight >}}
+```
 
 So far I find Conditional CSS a good idea and really like to work with it. It's easier, at least for me, to see what a
 class does and where/how it should be used. Also it's a simple use of DRY (don't repeat yourself) and [Single

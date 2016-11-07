@@ -20,17 +20,17 @@ First of all, what should this function do? It should:
 
 ### The functions
 We'll start with the basic: getting an element and manipulating its CSS.
-{{< highlight javascript >}}
+```javascript 
 	// Getting the element
 	var el = document.querySelector( '.test' );
 	el.style.background = 'red';
 	el.style['background'] = 'black';
-{{< / highlight >}}
+```
 
 Both of the above ways (`el.style.background` and `el.style['background']`) work the exact same way. But that's not much fun, right? Why should we want to set our styles this way and where's the dynamic functional stuff at all? Lets extend the script with a `css` function.
 
 
-{{< highlight javascript >}}
+```javascript 
 var css = function css( el, options ) {
 	/*1 */
   if( typeof(el) === 'object' ) {
@@ -41,7 +41,7 @@ var css = function css( el, options ) {
 	/* 2 */
   el.style[opts] = 'red';
 }
-{{< / highlight >}}
+```
 
 What this script does:
 
@@ -52,7 +52,7 @@ Alright, that's not bad but why should we want to sett everything to red? You're
 
 ### For key in obj
 For loops are always fun and especially `for in` loops. They're perfect for our needs because we'll pass a list (or better an Object) with property-value pairs to our function and need to process them so they can be applies as styles. Our modified function now looks like this:
-{{< highlight javascript >}}
+```javascript 
 var css = function css( el, options ) {
 	if( typeof( el ) === 'object' ) {
 		el = el;
@@ -69,7 +69,7 @@ var css = function css( el, options ) {
     styleValues.push(options[key])
   }
 }
-{{< / highlight >}}
+```
 
 1. We need to create an empty array to store all our property-value pairs in.
 2. We start our for in loop. We go over every key in our options object.
@@ -79,21 +79,21 @@ I'm sure there is a more elegant way to do this, but I couldn't really think of 
 Our `css()` function just got a lot more flexible! Before we could only set any property to one value (everything we want to `red`), now we can pass a lot of property-value pairs and they'll get processes by our function! Awesome, right?
 Calling the function would now look like this:
 
-{{< highlight javascript >}}
+```javascript 
 	css('.my-div', {
 	  color: 'yellow',
 	  background: '#333'
 	});
-{{< / highlight >}}
+```
 
 ### Almost there
 So far we can pass a list (object) of property-value pairs and process them into two nice arrays. However, the function does not apply these styles yet which is why we have to do one last step.
 
-{{< highlight javascript >}}
+```javascript 
   for(i = 0; i <= styleProperties.length; i++) {
     el.style[styleProperties[i]] = styleValues[i];
   }
-{{< / highlight >}}
+```
 
 We iterate over the array (doesn't matter which because both are exatctly the same size) and extract the matching properties and values. That's the point where we actually apply the styles.
 

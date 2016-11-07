@@ -17,7 +17,7 @@ The slider runs forever in a loop, animating images to the left until the last i
 
 First of all I defined some variables. 
 
-{{< highlight javascript >}}
+```javascript 
      // current image is 0
  var current = 0,
      // used for loops
@@ -30,21 +30,21 @@ First of all I defined some variables.
      imgWidth = Math.ceil(100 / allImages.length),
      // the slider width based on the number of images
      sliderWidth = allImages.length * 100;
-{{< / highlight >}}
+```
 
 Next I set the width of all images as well as the slider.
-{{< highlight javascript >}}
+```javascript 
     
   slider.style.width = sliderWidth + '%';
     
   for(i = 0; i <= allImages.length - 1; i++) {
     allImages[i].style.width = imgWidth + '%';
   }
-{{< / highlight >}}
+```
 
 Now the slider and images have the correct width (in percent) and I began to make the animation part. It's made with the [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/Window.setInterval) JavaScript function. 
 
-{{< highlight javascript >}}
+```javascript 
     function animateLeft(cur) {
       var i = 0,
           time = 50;
@@ -57,13 +57,13 @@ Now the slider and images have the correct width (in percent) and I began to mak
       }
       }, time);  
    }
-{{< / highlight >}}
+```
 
 The interval runs as long as `i` is smaller or equal to the image width. Because the interval is set to 50ms it runs "fast" and sets the images `margin-left` rapidly to `-i%` and because it runs as long as `i` is smaller than the image width it hides the image completely to the left. Pretty simple right? However, `time` is at the moment a variable that is set to 50 because I couldn't figure out a good way to calculate it.
 
 Another function I use is `animateRight` that is just the opposite of `animateLeft`. It is only used to animate all images back to the start and has the same markup as `animateLeft` expect it runs revers (`i--`). I combine it with a `reset` function that also resets the `current` variable to 0.
 
-{{< highlight javascript >}}
+```javascript 
   function animateRight(cur) {
       var i = imgWidth,
           time = 50;
@@ -84,11 +84,11 @@ Another function I use is `animateRight` that is just the opposite of `animateLe
       // resseting the current image to the first image
       current = 0;
     }   
-{{< / highlight >}}
+```
 
 That's all the functions I needed for this slider - I could've combined the `animateLeft` and `animateRight` function and if I continue developing this slider I'll make it. Last thing to do: Call a final interval that handles the sliding of all images.
 
-{{< highlight javascript >}}
+```javascript 
     setInterval(function () {
       if(current <= allImages.length - 2) {
         animateLeft(current);
@@ -98,4 +98,4 @@ That's all the functions I needed for this slider - I could've combined the `ani
         reset();
       }
     }, 3000);
-{{< / highlight >}}
+```

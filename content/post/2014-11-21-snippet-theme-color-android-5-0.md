@@ -18,9 +18,9 @@ the page and in the multi-tasking overview.
 
 ### One-liner!
 All it takes is a simple one-liner of HTML: a `<meta>`-tag!
-{{< highlight html >}}
+```html 
 <meta name="theme-color" content="#5677fc">
-{{< / highlight >}}
+```
 The content can be any valid CSS color and that's it - nothing more to do!
 
 ### Results

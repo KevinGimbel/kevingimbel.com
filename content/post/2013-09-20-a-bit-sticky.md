@@ -14,17 +14,17 @@ I just stumbled upon a very handy CSS Property: `position:sticky`. As far as I f
 To get an idea of how `position:sticky` works I made some basic markup.
 
 #### HTML
-{{< highlight html >}}
+```html 
 <article class="single__article">
     <hgroup class="single__article--header">
         # article header, this one will be sticked
     </hgroup>
     ...
 </article>
-{{< / highlight >}}
+```
 
 #### CSS 
-{{< highlight css >}}
+```css 
 .single__article {
     # classic article styles
 }
@@ -34,7 +34,7 @@ To get an idea of how `position:sticky` works I made some basic markup.
     position:-webkit-sticky; /* webkit prefixed */
     top: 20px; /* Space between the element and top */
 }
-{{< / highlight >}}
+```
 
 What `position:sticky` does is:
 
@@ -45,7 +45,7 @@ What `position:sticky` does is:
 <br>
 That's all. And it is very handy compared to the JavaScript and CSS usually needed for this (taken from HTML5 Rocks).
 
-{{< highlight js >}}
+```js 
 var header = document.querySelector('.header');
 var origOffsetY = header.offsetTop;
 
@@ -55,9 +55,9 @@ function onScroll(e) {
 }
 
 document.addEventListener('scroll', onScroll);
-{{< / highlight >}}
+```
 
-{{< highlight css >}}
+```css 
 .sticky {
   position: fixed;
   top: 0;
@@ -67,7 +67,7 @@ document.addEventListener('scroll', onScroll);
   background: #F6D565;
   padding: 25px 0;
 }
-{{< / highlight >}}
+```
 
 [See the Demo on CodePen](http://codepen.io/kevingimbel/pen/Cybof)
 

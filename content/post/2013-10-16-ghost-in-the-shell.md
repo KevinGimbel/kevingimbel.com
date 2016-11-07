@@ -16,10 +16,10 @@ First of all you have to install Node.js from [http://nodejs.org/](http://nodejs
 ### Installing Ghost
 Now you need to sign-up and download the Ghost source code from [https://ghost.org/](https://ghost.org/). Unpack the zip into the directory of your choice (mine is `var/www/`), open a terminal, navigate to the directory and enter the following:
 
-{{< highlight bash >}}
+```bash 
 # prefix with sudo on Ubuntu!
 $ npm install --production
-{{< / highlight >}}
+```
 
 After the installation process is finished run `$ npm start` to start the Node.js Server. Your brand-new Ghost site should now be running on 127.0.0.1:2368.
 
@@ -34,7 +34,7 @@ Basically Ghost can work with 3 layout files: post.hbs, default.hbs and index.hb
 
 #### index.hbs
 
-{{< highlight html >}}
+```html 
 {% raw %}
 {{#post }}
   <article class="post">
@@ -47,7 +47,7 @@ Basically Ghost can work with 3 layout files: post.hbs, default.hbs and index.hb
   </article>
 {{/post}}
 {% endraw %}
-{{< / highlight >}}
+```
 
 The above snippet simply outputs the title of the post and the author's name if one is given. A pretty neat thing about Handlebars is, that everything between `{{#post}}` and '{{//post}}' automatically gets pulled from the post it belongs to. As I mentioned above this looks a lot like Liquid as you can see in the [first code example here](http://kevingimbel.com/jekyll-guide/layouts/).
 
@@ -56,7 +56,7 @@ I'll not get into detail on how to style `post.hbs` because it is nearly the sam
 #### default.hbs
 First I thought this would be the "default" layout if no format is given (like in Jekyll) but it's a lot more important: `default.hbs` holds the entirely page and all the posts get included into it!
 
-{{< highlight html >}}
+```html 
 <html>
   <head>
     ...
@@ -67,28 +67,28 @@ First I thought this would be the "default" layout if no format is given (like i
     # build your footer here
   </body>
 </html>
-{{< / highlight >}}
+```
 
 The `body` handlebar is the point where another pages content gets included. To tell a layout that it will be included into another file you simply write `{{!< default}}` in the first line of it.
 
 This is a pretty handy feature I think. So far Ghost and building Themes for it is pretty easy and handy to use. You have to learn Handlebars to get the full potential out of it but that's OK I'd say. However, I'll now show off some things that I don't like or found confusing (still locally, deploying to a server comes later!)
 
-{{< highlight html >}}
+```html 
 {% raw %}
 {{! Ghost outputs important scripts and data with this tag }}
 {{ghost_foot}}
 {% endraw %}
-{{< / highlight >}}
+```
 
 So Ghost, please tell me more about "important data and scripts". I haven't found any file that contains this data or scripts and I wasn't sure if this tag is only needed for the Casper Theme or if it's important for other stuff. In the end I just left it there.
 
 Beside this tag I found another, kinda self-explaining tag: `{{pagination}}`    
-{{< highlight html >}}
+```html 
 {% raw %}
 {{!! After all the posts, we have the previous/next pagination links }}
 {{pagination}}
 {% endraw %}
-{{< / highlight >}}
+```
 
 Cool, so Ghost builds me a pagination! But wait, I'd like to style it. So...where's the pagination layout? I searched it inside my themes directory (because I copy/pasted the Casper Theme to modify it) but there was no file that holds the pagination. After searching around for quite some time I found it inside `core/server/helper/tpl` - I have no idea why this helper is here. However, it's a `*.bhs` file so customizing it is the same as with any other file.
 
