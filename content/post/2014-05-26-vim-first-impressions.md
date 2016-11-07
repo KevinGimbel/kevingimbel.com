@@ -30,7 +30,7 @@ simple text editor like atom, sublime of vim. I guess that's the downside of hav
 trying them, maybe they enhance your workflow). Atom is really like a  clone of Sublime Text running Web Technologies at
 it's heart (Sublime Text is written in Python).
 
-!["Vim while writing a article"](http://i.kevingimbel.me/sc/vim_markdown.png "Vim while writing an article")
+!["Vim while writing a article"](https://i.kevingimbel.me/sc/vim_markdown.png "Vim while writing an article")
 
 Anyway, back to Vim. Vim is, what supprised me first, a command line-based editor, there is a Graphic UI version called
 gVim but I wanted to see how I can customize the command line one. Just like the normal bash has a
@@ -126,7 +126,7 @@ post I found this isn't needed when working with version controls such as git.
 The weird looking brackets are used to "auto-close" this section so that when I open my file only the discription is
 visible - this makes a long `.vimrc` a lot more readable. 
 
-![Vim with auto-closed sections](http://i.kevingimbel.me/sc/sc-26-01-13.png "Vim with auto-closed sections")
+![Vim with auto-closed sections](https://i.kevingimbel.me/sc/sc-26-01-13.png "Vim with auto-closed sections")
 
 So that's it, my tiny Vim experience and setup. As with every config things you can grab a copy of my `.vimrc` in the
 [Github Config Repo](https://github.com/kevingimbel/config/blob/master/.vimrc).

@@ -28,7 +28,7 @@ Bracket comes with a Live Preview functionality that allows to display a file in
 #### Auto-Complete
 Both Sublime Text and Brackets have auto-complete for CSS. While Sublime Text "only" supports basic auto-complete (e.g. typing `'hei' + tab` will get you `height: `) Brackets supports to "Quick Edit" colors (right-click on a color or use `CMD+E` when hovering it) to bring up a color dialog as show below. This is a nice feature when trying to find a color.
 
-![Quick Edit Colors in Brackets](http://i.kevingimbel.me/sc/screenshot-53-24.png "Quick Edit Colors in Brackets")
+![Quick Edit Colors in Brackets](https://i.kevingimbel.me/sc/screenshot-53-24.png "Quick Edit Colors in Brackets")
 
 Another thing both support is the auto-closing of HTML tags (e.g. `<article>` will get you `<article></article>`).
 Unfortunately Brackets does not query SCSS variables. When you define your variables in Sublime and type `$color--` Sublime Text shows all variables starting with `$color--` - that's a thing I really miss in Brackets.

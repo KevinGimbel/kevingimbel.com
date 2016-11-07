@@ -99,7 +99,7 @@ Catalog Menu and there the first Sub-Menu point (which is also named Catalog).
 
 Groups define the "containers" for settings. These are the boxes on the right part of the screen. Because describing it
 is rather stupid, here's a picture of the new admin menu and it's container (the group).
-!["Custom field in the backend."](http://i.kevingimbel.me/sc/Screenshot at 13-52-42.png)
+!["Custom field in the backend."](https://i.kevingimbel.me/sc/Screenshot at 13-52-42.png)
 
 Lastly inside the group the content is defined. The wrapping tag can have any valid XML name you want, in my case it is
 `<featured_products>` the `translate="label"` attribute tells Magento to translate the label if there is a translation

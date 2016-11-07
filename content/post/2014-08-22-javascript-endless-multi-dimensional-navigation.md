@@ -62,7 +62,7 @@ for click events applied to `<a>`-tags. This function stops the normal event bub
 the page - which is the default action for `<a>`-tags. 
 So in our case the behavior we make use of is event bubbling, as said before. Take a look at the graphic below and then
 read on.
-!["Event Bubbling for this navigation"](http://i.kevingimbel.me/sc/event_flow_v1.png) 
+!["Event Bubbling for this navigation"](https://i.kevingimbel.me/sc/event_flow_v1.png) 
 When the even get's triggered it finds no handler and the event literally goes up the DOM until it finds a handler. Node
 by node the little event walks up until finally the navigation wrapper says "Yes little event! I got you, I'll handle
 that!" - and that's it. When the handler attached to the navigation handles the event it will also populate it's `el`

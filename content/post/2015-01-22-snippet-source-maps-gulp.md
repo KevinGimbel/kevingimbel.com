@@ -63,13 +63,13 @@ image to view it in full-size.
 
 <div class="gw">
 <div class="g one-half small-one-whole">
-<a href="http://i.kevingimbel.me/blog/sourcemaps/source_maps_chrome_dev_tools.png" title="Source Maps inside the Chrome Developer Tools">
-  <img src="http://i.kevingimbel.me/blog/sourcemaps/source_maps_chrome_dev_tools.png" alt="Source Maps in Chrome" />
+<a href="https://i.kevingimbel.me/blog/sourcemaps/source_maps_chrome_dev_tools.png" title="Source Maps inside the Chrome Developer Tools">
+  <img src="https://i.kevingimbel.me/blog/sourcemaps/source_maps_chrome_dev_tools.png" alt="Source Maps in Chrome" />
 </a>
 </div>
 <div class="g one-half  small-one-whole">
- <a href="http://i.kevingimbel.me/blog/sourcemaps/source_maps_firefox_dev_tools.png" title="Source Maps inside the Chrome Developer Tools">
-  <img src="http://i.kevingimbel.me/blog/sourcemaps/source_maps_firefox_dev_tools.png" alt="Source Maps in Chrome" />
+ <a href="https://i.kevingimbel.me/blog/sourcemaps/source_maps_firefox_dev_tools.png" title="Source Maps inside the Chrome Developer Tools">
+  <img src="https://i.kevingimbel.me/blog/sourcemaps/source_maps_firefox_dev_tools.png" alt="Source Maps in Chrome" />
  </a>
 </div>
 </div>

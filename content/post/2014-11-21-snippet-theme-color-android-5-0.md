@@ -27,13 +27,13 @@ The content can be any valid CSS color and that's it - nothing more to do!
 
 <div class="gw">
  <div class="g one-third small-one-whole">
-  <img src="http://i.kevingimbel.me/blog/android5/nexus_kevingimbelcom.png">
+  <img src="https://i.kevingimbel.me/blog/android5/nexus_kevingimbelcom.png">
  </div> 
  <div class="g one-third small-one-whole">
   <p><em>left/top:</em>View when the website is in-browser, the gray bar with the URL input turns to the desired color.</p>
   <p><em>right/bottom: View when clicking the multi-task button.</em></p>
  </div>
  <div class="g one-third small-one-whole">
-  <img src="http://i.kevingimbel.me/blog/android5/nexus_multitasking.png">
+  <img src="https://i.kevingimbel.me/blog/android5/nexus_multitasking.png">
  </div>
 </div>
