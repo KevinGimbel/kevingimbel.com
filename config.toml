@@ -1,13 +1,19 @@
 baseurl = "http://hugo.kevingimbel.de/"
 languageCode = "en-us"
-title = "Kevin Gimbel | Developer"
 theme = "kevingimbel"
+title = "Kevin Gimbel — Developer"
 
 pygmentsstyle = "github"
 pygmentsuseclasses = true
+canonifyurls = true
+
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
 [permalinks]
   # Posts should be linked under the site-root with their title.
   post = "/:title/"
   project = "/projects/:title/"
+
+[params]
+  author = "Kevin Gimbel"
+  description = "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, musici, and arts." 

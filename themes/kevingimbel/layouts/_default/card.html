@@ -1,5 +1,6 @@
 <div class="article__card" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
   <h3 class="h2" id="heading-{{ .UniqueID }}"><a href="{{ .Permalink }}" title="Read more about {{ .Title }}" tabindex="1">{{ .Title }}</a></h3>
+  <p><small>{{ .WordCount }} words, read in {{ .ReadingTime }}minutes.</small></p>
   <div class="article-home__body" id="description-{{ .UniqueID }}">
     <p>{{ .Summary | plainify | safeHTML }}
     {{ if .Truncated }}

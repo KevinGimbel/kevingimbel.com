@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
 <head>
-  <title>{{ .Site.Title }}</title>
-  {{ partial "meta.html" }}
+  <meta charset="utf-8">
+  <base href="{{ .Site.BaseURL }}">
+  {{ .Hugo.Generator }}
+  <title>{{ with .Title }} {{ . }} {{ else }}Kevin Gimbel &mdash; Developer{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="keywords" content="Front-End, Developer, CSS, Bash, Go, JavaScript, Germany, Frankfurt, Docker, Magento" />
+  <meta name="viewport" content="width=device-width" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/highlight.css" />
 </head>
 <body lang="en">
-<header class="scroller"></header>
-
 <header class="site__header">
   <div class="wrap">
     <h1>Kevin Gimbel</h1>

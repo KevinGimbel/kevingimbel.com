@@ -131,7 +131,11 @@ figcaption {
 }
 
 @media all and (min-width: 85rem) {
-  .content p, .content h1, .content h2, .content h3, .content h4 {
+  .content p, .content h1, .content h2, .content h3, .content h4, .article__footer {
     padding: 0;
   }
+}
+
+.no-speak {
+  speak: none;
 }
