@@ -1,4 +1,4 @@
-baseurl = "http://hugo.kevingimbel.de/"
+baseurl = "https://kevingimbel.com/"
 languageCode = "en-us"
 theme = "kevingimbel"
 title = "Kevin Gimbel — Developer"
