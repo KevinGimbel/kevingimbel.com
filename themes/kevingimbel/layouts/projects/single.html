@@ -1,0 +1,22 @@
+{{ define "title" }}
+  {{ .Title }} | Projects | {{ $.Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  <header class="article__header">
+    <div class="inner">
+      <h2 class="title">{{ .Title }}</h2>
+      <p><a href="{{ .Params.project_url }}">Lern more on GitHub</a></p>
+    </div>
+  </header>
+
+  <section class="article wrap">
+    <div class="article__content inner">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ range $script := .Params.scripts }}
+    <script src="{{ $script }}"></script>
+  {{ end }}
+{{ end }}

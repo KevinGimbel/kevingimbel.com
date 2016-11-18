@@ -1,4 +1,7 @@
-{{ partial "header.html" }}
+{{ define "title" }}
+  Posts tagged with #{{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
 
 <section class="page wrap" aria-labeldyby="title" aria-describedby="title">
   <h3 id="title">All posts <a href="/tags/">tagged</a> under #{{ .Title }}</h3>
@@ -11,4 +14,4 @@
 
 </section>
 
-{{ partial "footer.html" }}
+{{ end }}
