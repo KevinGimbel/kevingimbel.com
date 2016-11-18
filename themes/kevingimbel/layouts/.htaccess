@@ -4,9 +4,9 @@ ErrorDocument 404 /404.html
   RewriteEngine On
 	RewriteBase /
 
-	# Rewrite alternative domain (kevingimbel.de) to kevingimbel.com 
-	RewriteCond %{HTTP_HOST} !kevingimbel.com$ [NC]
-	RewriteRule ^(.*)$ https://kevingimbel.com/$1 [L,R=301]
+  # Rewrite alternative domain (kevingimbel.de) to kevingimbel.com
+  RewriteCond %{HTTP_HOST} !kevingimbel.com$ [NC]
+  RewriteRule ^(.*)$ https://kevingimbel.com/$1 [L,R=301]
 
   # Rewrite www to non-www
   RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
@@ -30,7 +30,6 @@ ErrorDocument 404 /404.html
   ExpiresByType image/png "access plus 1 months"
 
   # CSS
-  ExpiresByType text/css "access plus 1 months"
   ExpiresByType text/javascript "access plus 1 months"
   ExpiresByType application/javascript "access plus 1 months"
 </IfModule>
