@@ -1,24 +1,26 @@
-{{ partial "header.html" }}
-
-<section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
-  <header class="page-header">
-    <h2 id="title">{{ .Title }}</h2>
-  </header>
-  <div class="page-body" id="desc">
-    {{ .Content }}
-  </div>
-
-{{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
-  <section id="{{ .Key }}" class="article-list__divider">
-    <h4 class="h1">{{ .Key }}</h4>
-    <div class="article__card-list">
-      {{ range .Pages }}
-        {{ .Render "card" }}
-      {{ end }}
-    </div>
-  </section>
+{{ define "title" }}
+  {{ .Title }} | {{ $.Site.Title }}
 {{ end }}
 
-</section>
+{{ define "main" }}
+  <section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
+    <header class="page-header">
+      <h2 id="title">{{ .Title }}</h2>
+    </header>
+    <div class="page-body" id="desc">
+      {{ .Content }}
+    </div>
 
-{{ partial "footer.html" }}
+  {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
+    <section id="{{ .Key }}" class="article-list__divider">
+      <h4 class="h1">{{ .Key }}</h4>
+      <div class="article__card-list">
+        {{ range .Pages }}
+          {{ .Render "card" }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  </section>
+{{ end }}

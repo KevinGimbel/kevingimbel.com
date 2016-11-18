@@ -1,5 +1,4 @@
-{{ partial "header.html" }}
-
+{{ define "main" }}
 <section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
   <header class="page-header">
     <h2 id="title">{{ .Title }}</h2>
@@ -8,5 +7,4 @@
     {{ .Content }}
   </div>
 </section>
-
-{{ partial "footer.html" }}
+{{ end }}

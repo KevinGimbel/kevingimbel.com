@@ -1,4 +1,8 @@
-{{ partial "header.html" . }}
+{{ define "title" }}
+  Home | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
 
 <section id="main" class="wrap">
 
@@ -15,4 +19,4 @@
   {{ end }}
 </section>
 
-{{ partial "footer.html" . }}
+{{ end }}
