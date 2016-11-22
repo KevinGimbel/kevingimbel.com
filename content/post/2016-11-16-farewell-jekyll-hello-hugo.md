@@ -23,7 +23,7 @@ Jekyll is written in Ruby. I have no intention of learning anything related to R
 
 Hugo on the other hand "just works". Hugo is one binary file with zero dependencies after building and can just be executed. On a server with Go installed it's as easy as running `go get -v github.com/spf13/hugo` or if Go is not available there are pre-built binaries.
 
-```text
+```bash
 $ wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17_Linux-64bit.tar.gz
 $ tar -xzvf hugo_0.17_Linux-64bit.tar.gz
 $ ln -s hugo_0.17_linux_amd64 hugo

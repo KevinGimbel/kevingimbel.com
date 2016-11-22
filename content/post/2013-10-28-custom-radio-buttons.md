@@ -20,7 +20,7 @@ A few years ago I had to do this once and I remember doing it with an image and 
 
 That's it: A group of `radio inputs` representing a rating system with 1-5 possible choices. The CSS part is a little bit trickier (note that I'm using Sass with SCSS Syntax!)
 
-```scss 
+```css 
 .rating--star {
   color:#ff7711;
   &:before {
@@ -40,7 +40,7 @@ That's it: A group of `radio inputs` representing a rating system with 1-5 possi
 ```
 
 A small piece of code, yet it can seem complicated. I'll break it down a bit. 
-```scss 
+```css 
 .rating--star {
   color:#ff7711;
 
@@ -54,7 +54,7 @@ A small piece of code, yet it can seem complicated. I'll break it down a bit.
 ```
 The first part represents the class itself and the `:before` pseudo element that holds the icon (in this case a Star from the entypo icon font served via [We Love Icon Fonts](http://weloveiconfonts.com)), I set the color on the element directly because the `:before` and `:checked ~ :before` are using the same color. `appearance:none;` removes the User Agent style from the input element or, in other words, "hides" the element.
 
-```scss 
+```css 
  &:checked ~ :before {
     content:"\2606";
   }

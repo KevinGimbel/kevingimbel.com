@@ -25,7 +25,7 @@ First of all I had a Product and a `div` that holds the flag (in this example "T
 The `data-id` controls the color of the tag and the `data-tagname` controls the content of it. In the real-world example they're applied via a Content Management System and, as I said before, can vary in length. The HTML Job is done with this setup and now comes the most fun part: The (S)CSS.
 
 ### CSS
-```scss
+```css
   .tag {
     width:auto;
     height:auto;
@@ -38,14 +38,14 @@ The `data-id` controls the color of the tag and the `data-tagname` controls the 
 ```
 
 The basic tag should be position absolute on the left of the article and `-1em` on top of the article (this comes because the article has a padding of 1.5em and I want it to be half the way out of the article container). So far there is a tag with auto width and auto height. With the next snippet we'll get the data-tagname inside out pseudo element.
-```scss
+```css
     &:before {
       content:attr(data-tagname);
     }
 ```
 
 and a small triangle behind it
-```scss
+```css
     &:after {
       content:"";
       position:absolute;
@@ -59,7 +59,7 @@ and a small triangle behind it
 ```
 
 Success! The first basic tag is finished, but why the `data-id` you may ask? Because they make the magic! As I said before the color is controlled via `data-id` and here's how this works:
-```scss
+```css
 &[data-id="1"] {
   background:$color-1;
     &:after {
@@ -69,7 +69,7 @@ Success! The first basic tag is finished, but why the `data-id` you may ask? Bec
 ```
 
 If you repeat this for all your `data-id`s and colors you'll end up having some sweet Product Flags. The whole code for my product flags looks like this:
-```scss
+```css
   .tag {
     width:auto;
     height:auto;

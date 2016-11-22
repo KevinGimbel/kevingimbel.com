@@ -131,7 +131,7 @@ Compass is now watching for changes and everytime you save your `style.scss` it 
 
 Let's start with Variables because I assume you know what they are and have already seen variables in other programming languages.
 
-```scss 
+```css 
 // Variables start with a $, e.g.
 $main-color: #85c226;
 ```
@@ -139,7 +139,7 @@ $main-color: #85c226;
 Variables must be declared **before** they're used, that's why I recommend to declare all variables at the top of the document (or inside a other stylesheet that can be included, more later on).
 To use a variable you simply write it to the place you want it to be used. Logical, isn't it?
 
-```scss 
+```css 
 $main-color: #85c226;
 
 .my-class {
@@ -160,14 +160,14 @@ Basically that's it. You can store Strings, Colors, and other variables inside a
 ### Mixins
 
 Mixins are getting a little bit more interesting. They're snippets of code you can use, for example, to save the vendor prefixing. Compass comes with build-in Mixins but you can also create your own Mixins. To use the Compass Mixins you have to include Compass on top of your style.scss as followed:
-```scss 
+```css 
 // import everything that compass has
 @import "compass";
 // import special library (e.g. css3)
 @import "compass/css3";
 ```
 
-```scss 
+```css 
 // creating a mixin
 @mixin border-radius($r) {
     -webkit-border-radius:$r;
@@ -198,7 +198,7 @@ The mixin can be created once and then be reused everywhere inside your style.sc
 ```
 
 There are more super useful build in function in Sass. Some of my favorite are `darken()` and `lighten()` for colors.
-```scss 
+```css 
 $my-color: red;
 $my-color--dark: darken($my-color,10%);
 // this will produce a hexadecimal code (e.g. #132644) of a 

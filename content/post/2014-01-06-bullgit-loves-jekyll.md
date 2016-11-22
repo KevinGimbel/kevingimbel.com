@@ -32,7 +32,7 @@ You can work like this, with `{% include file.html %}` and Layouts in the Front 
 
 However, back to the bullgit. I discovered a awesome feature about Jekyll I didn't knew before: Data handling. When you create a folder called `_data` in your root directory you can put every kind of text-based data inside a *.yml file and load it in every page of your site.
 
-```YAML 
+```yaml 
 # let's assume this is members.yml
 - name: Tim
   twitter: timpietrusky
