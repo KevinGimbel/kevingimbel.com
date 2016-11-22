@@ -19,7 +19,7 @@ With a Linux Distribution similar to Ubuntu (such as Kubuntu, Lubuntu, etc.) you
 
 Clone this repository to some place on your computer.
 
-```sh
+```bash
 $ cd ~/workspace/github
 $ git clone git@github.com:kevingimbel/vhost.git
 ```
@@ -30,7 +30,7 @@ executable and then symlink the vhost executable to some place that's in
 your `$PATH`.
 
 So, inside the Repository do the following
-```sh
+```bash
 $ (sudo) ln -s /full/path/to/template.conf /etc/apache2/sites-available
 $ chmod +x vhost
 $ ln -s /full/path/to/vhost /usr/local/bin/vhost
@@ -108,7 +108,7 @@ template file would then look like this.
 
 Like installing `vhost` you just need to make the file executable and link it somewhere in your path. Then run `vhost-ssl -v` to verify it worked.
 
-```sh
+```bash
 $ (sudo) ln -s /full/path/to/vhost-ssl /usr/local/bin/vhost-ssl
 $  vhost-ssl -v
 
@@ -118,7 +118,7 @@ $  vhost-ssl -v
 
 `vhost-ssl` is a utility tool to create SSL keys and certificates for self-signed SSL certificates to use in local development. To run `vhost-ssl` you will need to create a `.vhostrc` in your home directory (`~/`). Inside configure a default key file used to sign certificates and a default output directory.
 
-```txt
+```bash
 # .vhostrc
 vhost_ssl_cert_dir="/etc/ssl/certs"
 vhost_ssl_key_file="/etc/ssl/private/apache.key"
@@ -130,7 +130,7 @@ The `.vhostrc` file is read in when the command runs.
 
 See `vhost --usage` for a usage overview.
 
-```txt
+```bash
 Usage: vhost-ssl [options [arg]]
 Script to create SSL keys and certificates.
 

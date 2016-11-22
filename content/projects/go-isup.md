@@ -14,7 +14,7 @@ Go executable to check if a remote host is available or not. First argument pass
 ### Usage
 `isup` can be used from the command line as follows:
 
-```sh
+```bash
 $ ./path/to/isup "https://kevingimbel.com"
 ```
 If you want to use it globally, create a symlink to the executable somewhere inside your `$PATH`.

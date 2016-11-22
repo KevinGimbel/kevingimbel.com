@@ -12,14 +12,14 @@ Executable around the Go HTTP Server. Used to serve static files from a director
 3. Run `go build goserve.go` from within the new directory.
 
 If you would like to run the program from everywhere, link it into you `$PATH` variable, e.g.:
-```sh
+```bash
   $ sudo ln -s $(pwd)/goserve /usr/local/bin
 ```
 
 ### Usage
 `goserve` can be used from the command line as follows:
 
-```sh
+```bash
   $ goserve [-port ""]
 ```
 This will serve the current directory to `localhost:8000` or the specified port.
