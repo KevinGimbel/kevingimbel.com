@@ -2,14 +2,14 @@ pre, code {
   font-family: 'Source Code Pro', Courier New, monospace;
 }
 pre {
-  background: #f1f1f1;
-  border: 1px solid #ddd;
+  background: #333;
   padding: .75rem;
   margin: .75rem 0;
   overflow: auto;
+  border-radius: 3px;
 }
 
-code {
+p > code {
   background: #f1f1f1;
   padding: .25rem;
   border-radius: 3px;

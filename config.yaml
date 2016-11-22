@@ -1,0 +1,24 @@
+baseurl: "https://kevingimbel.com/"
+languageCode: "en-us"
+theme: "kevingimbel"
+title: "Kevin Gimbel — Developer"
+
+PygmentsStyle: "native"
+PygmentsUseClasses: false
+PygmentsCodeFencesGuessSyntax: true
+PygmentsCodeFences: true
+
+canonifyurls:  true
+
+enableEmoji: true
+
+# Set permalinks, they can be content-type based!
+# Reference: http://gohugo.io/extras/permalinks/
+permalinks:
+  # Posts should be linked under the site-root with their title.
+  post: "/:title/"
+  project: "/projects/:title/"
+
+params:
+  author: "Kevin Gimbel"
+  description: "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, musici, and arts."
