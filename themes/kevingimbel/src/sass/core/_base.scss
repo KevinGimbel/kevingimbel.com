@@ -18,7 +18,8 @@ html, body {
 
 a {
   color: $color-accent--dark;
-
+  text-decoration: none;
+  border-bottom: .125rem solid currentColor;
     &:hover {
       color: $color-accent--secondary;
     }

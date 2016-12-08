@@ -6,12 +6,12 @@
 
 .article__header {
   background: $color--article;
-  color: #fff;
+  color: $color-accent--dark;
   margin-top: -2rem;
 }
 
 .article__header a {
-  color: #fff;
+  color: $color-accent--dark;
 }
 
 .article__content {

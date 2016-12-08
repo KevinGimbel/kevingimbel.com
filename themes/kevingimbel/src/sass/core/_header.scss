@@ -1,10 +1,14 @@
 .site__header {
-  background: #0c1012;
-  color: #fff;
+  background: blue;
+  color: white;
   padding: 2rem;
 
     a {
-      color: $color-accent;
+      color: white;
+
+        &:hover {
+          color: deeppink;
+        }
     }
 }
 
