@@ -117,6 +117,10 @@ figcaption {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
+
+    @media all and (max-width: 80rem) {
+      max-width: 60rem;
+    }
 }
 
 .inner {
