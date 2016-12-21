@@ -18,7 +18,8 @@ html, body {
 
 a {
   color: $color-accent--dark;
-
+  text-decoration: none;
+  border-bottom: .125rem solid currentColor;
     &:hover {
       color: $color-accent--secondary;
     }
@@ -116,6 +117,10 @@ figcaption {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
+
+    @media all and (max-width: 80rem) {
+      max-width: 60rem;
+    }
 }
 
 .inner {
