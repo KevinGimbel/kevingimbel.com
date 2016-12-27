@@ -12,8 +12,8 @@
     </div>
 
   {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
-    <section id="{{ .Key }}" class="article-list__divider">
-      <h4 class="h1">{{ .Key }}</h4>
+    <section id="{{ .Key }}">
+      <h4 class="h1 featured__title">{{ .Key }}</h4>
       <div class="article__card-list">
         {{ range .Pages }}
           {{ .Render "card" }}

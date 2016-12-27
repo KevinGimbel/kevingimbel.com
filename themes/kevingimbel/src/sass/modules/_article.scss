@@ -5,7 +5,7 @@
 }
 
 .article__header {
-  background: $color--article;
+  border-bottom: 1px solid #f1f1f1;
   color: $color-accent--dark;
   margin-top: -2rem;
 }
@@ -42,14 +42,58 @@
 
 .article__card {
   margin: 1rem;
-  background: #f1f1f1;
-  border: 1px solid #aaa;
   width: calc(50% - 2rem);
-  padding: 1rem;
+}
+
+.article__card .h2, .article__card p {
+    padding: 0 1rem;
 }
 
 @media all and (max-width: 60rem) {
   .article__card {
     width: 100%;
+  }
+}
+
+
+/**
+ * Featured Articles
+ */
+
+.article-featured {
+  width: 110%;
+  margin-left: -5%;
+  background: blue;
+  padding: 2rem;
+  color: #fff;
+
+    a {
+      color: #fff;
+    }
+}
+
+.featured__title {
+  position: relative;
+  bottom: -1rem;
+  left: -4rem;
+  background: deeppink;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.featured__project {
+  background: $color-accent;
+  color: #fff;
+  padding: 2rem;
+
+    a {
+      color: #fff;
+    }
+}
+
+
+@media all and (max-width: 60rem) {
+  .featured__title {
+    left: 0;
   }
 }

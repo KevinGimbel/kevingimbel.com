@@ -1,5 +1,5 @@
 .site__header {
-  background: blue;
+  background: $color-accent;
   color: white;
   padding: 2rem;
 
@@ -7,7 +7,7 @@
       color: white;
 
         &:hover {
-          color: deeppink;
+          border-color: $color-accent--secondary;
         }
     }
 }

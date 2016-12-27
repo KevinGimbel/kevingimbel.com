@@ -7,15 +7,17 @@
 <section id="main" class="wrap">
 
 <section class="home-section">
-  <p class="h6">Lately I wrote about:</p>
+  <p class="h6 featured__title">Lately I wrote about:</p>
   {{ range first 1 (where .Data.Pages "Section" "post") }}
-    {{ .Render "article-home" }}
+    {{ .Render "home-featured" }}
   {{ end }}
 </section>
 <section class="home-section">
-  <p class="h6">Latest Projects</p>
+  <p class="h6 featured__title">Latest Projects</p>
   {{ range first 3 (where .Data.Pages "Section" "projects") }}
-    {{ .Render "article-home" }}
+    <div class="featured__project">
+      {{ .Render "article-home" }}
+    </div>
   {{ end }}
 </section>
 
