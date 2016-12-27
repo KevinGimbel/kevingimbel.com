@@ -19,7 +19,7 @@
 }
 
 .article__footer {
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
 .article-home {
@@ -95,5 +95,18 @@
 @media all and (max-width: 60rem) {
   .featured__title {
     left: 0;
+  }
+
+  .article-featured {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .home-section {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
   }
 }

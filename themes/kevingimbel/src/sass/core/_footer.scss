@@ -2,7 +2,6 @@
   padding: 2rem 0;
 }
 
-
 @media all and (max-width: 80rem) {
   .site__footer {
     padding: 1rem;
@@ -15,5 +14,11 @@
       a {
         color: $color-accent--secondary;
       }
+  }
+}
+
+@media all and (max-width: 60rem) {
+  .site__footer {
+    margin-top: 0;
   }
 }
