@@ -12,7 +12,7 @@ Today I was caught off-guard by a docker "bug" - or so I thought at first. I tri
 
 While the configuration files were all correct, I made a mistake and did not provide a `.dockerignore` file. Without the `.dockerignore` two 6GB SQL dumps in the same directory which were mounted into the docker container which made the docker daemon crash / hang up. The simple solution was to create the following `.dockerignore` file.
 
-```txt
+```
 # database directory on the host
 .db
 # all sql and gz files
@@ -24,7 +24,7 @@ Afterwards the `docker-compose` started without any issues because it now had a 
 
 Lessen learned: Always make sure your `.dockerignore` is setup right and ignores all big files! The full file looks as follows:
 
-```txt
+```
 node_modules
 .sass-cache
 .db
