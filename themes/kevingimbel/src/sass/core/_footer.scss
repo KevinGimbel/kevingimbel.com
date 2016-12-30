@@ -17,6 +17,10 @@
   }
 }
 
+.site__footer p {
+    margin-bottom: .5rem;
+}
+
 @media all and (max-width: 60rem) {
   .site__footer {
     margin-top: 0;

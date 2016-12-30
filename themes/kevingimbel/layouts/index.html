@@ -7,13 +7,24 @@
 <section id="main" class="wrap">
 
 <section class="home-section">
-  <p class="h6 featured__title">Lately I wrote about:</p>
+  <p class="h6 featured__title">
+    <span class="icon-flex__wrap">
+      <svg class="icon--small icon-flex__icon-left"><use xlink:href="/img/icons.svg#icon-quote"></use></svg>
+      <span>Lately I wrote about:</span>
+    </span>
+  </p>
   {{ range first 1 (where .Data.Pages "Section" "post") }}
     {{ .Render "home-featured" }}
   {{ end }}
 </section>
+
 <section class="home-section">
-  <p class="h6 featured__title">Latest Projects</p>
+  <p class="h6 featured__title">
+    <span class="icon-flex__wrap">
+      <svg class="icon--small icon-flex__icon-left"><use xlink:href="/img/icons.svg#icon-code-working"></use></svg>
+      <span>Latest Projects</span>
+    </span>
+  </p>
   {{ range first 3 (where .Data.Pages "Section" "projects") }}
     <div class="featured__project">
       {{ .Render "article-home" }}

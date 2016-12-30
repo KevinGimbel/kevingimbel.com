@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-### Hey! My name's Kevin Gimbel. I am a Front-End Engineer & enjoy a good ~~tea~~ coffee.
+Hey! My name is Kevin Gimbel and I am a Front-End Engineer / Developer at [Synoa GmbH](https://synoa.de). I enjoy good ~~tea~~ ~~coffee~~ tea and coffee and like to play video games or go to concerts.
 
 {{% figure src="/images/warsaw2016.jpg" caption="Me in Warsaw for Front-Trends 2016. Photo by Michael Kühnel." %}}
 

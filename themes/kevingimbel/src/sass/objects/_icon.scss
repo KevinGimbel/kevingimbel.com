@@ -1,0 +1,27 @@
+.icon,
+.icon--small {
+  display: inline-block;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--small {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-flex__wrap {
+  display: inline-flex !important;
+  align-items: center;
+
+  .icon-flex__icon-right {
+    margin-left: .25rem;
+  }
+
+  .icon-flex__icon-left {
+    margin-right: .25rem;
+  }
+}

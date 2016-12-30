@@ -14,8 +14,16 @@
   color: $color-accent--dark;
 }
 
+.article__header p {
+  padding: 0 2rem;
+}
+
 .article__content {
   margin-top: 1rem;
+}
+
+.article__content ul {
+  padding-left: 2rem;
 }
 
 .article__footer {
@@ -79,6 +87,7 @@
   background: deeppink;
   color: #fff;
   line-height: 2rem;
+  padding: 0 2rem !important;
 }
 
 .featured__project {

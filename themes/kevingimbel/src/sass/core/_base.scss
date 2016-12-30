@@ -94,6 +94,7 @@ ol {
 
 figure {
   margin: .75rem 0;
+  line-height: 0;
 }
 
 figure img {
@@ -107,6 +108,11 @@ figcaption {
   padding: .5rem;
   text-align: right;
   color: #666;
+
+    p {
+      padding: 0 !important;
+      line-height: 2;
+    }
 }
 
 .page-inner {
@@ -132,7 +138,8 @@ figcaption {
 }
 
 .content p, .content h1, .content h2, .content h3, .content h4 {
-  padding: 0 2rem;
+  padding: 1rem 2rem;
+  padding-top: 0;
 }
 
 @media all and (min-width: 85rem) {
@@ -143,4 +150,11 @@ figcaption {
 
 .no-speak {
   speak: none;
+}
+
+.divider {
+  margin: 1rem 0;
+  background: #fff;
+  border: none;
+  height: 1px;
 }

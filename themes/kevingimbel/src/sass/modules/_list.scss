@@ -20,14 +20,15 @@
 
 .list__flex li {
   display: block;
+  padding: .5rem;
 }
 
-@media all and (min-width: 60rem) {
-  .list__flex {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+
+.list__flex {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .tag-list {

@@ -22,7 +22,7 @@ While the configuration files were all correct, I made a mistake and did not pro
 
 Afterwards the `docker-compose` started without any issues because it now had a build context of around 400MB instead of 13GB.
 
-Lessen learned: Always make sure your `.dockerignore` is setup right and ignores all big files! The full file looks as follows:
+Lesson learned: Always make sure your `.dockerignore` is setup right and ignores all big files! The full file looks as follows:
 
 ```
 node_modules
