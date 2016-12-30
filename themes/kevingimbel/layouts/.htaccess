@@ -2,9 +2,9 @@ ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-	RewriteBase /
+  RewriteBase /
 
-  # Rewrite alternative domain (kevingimbel.de) to kevingimbel.com
+  # Rewrite alt domain (kevingimbel.de) to kevingimbel.com
   RewriteCond %{HTTP_HOST} !kevingimbel.com$ [NC]
   RewriteRule ^(.*)$ https://kevingimbel.com/$1 [L,R=301]
 
@@ -28,15 +28,20 @@ ErrorDocument 404 /404.html
   ExpiresByType image/jpeg "access plus 1 months"
   ExpiresByType image/gif "access plus 1 months"
   ExpiresByType image/png "access plus 1 months"
+  ExpiresByType image/svg+xml "access pluss 1 months"
 
-  # CSS
-  ExpiresByType text/javascript "access plus 1 months"
-  ExpiresByType application/javascript "access plus 1 months"
+  # JavaScript
+	ExpiresByType text/javascript "access plus 1 months"
+	ExpiresByType application/javascript "access plus 1 months"
 </IfModule>
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/plain
-  AddOutputFilterByType DEFLATE text/html
+  # Add SVG type
+  AddType image/svg+xml .svg
+
+  AddOutputFilterByType DEFLATE image/svg+xml
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/xml
   AddOutputFilterByType DEFLATE text/css
   AddOutputFilterByType DEFLATE text/javascript
@@ -45,5 +50,4 @@ ErrorDocument 404 /404.html
   AddOutputFilterByType DEFLATE application/rss+xml
   AddOutputFilterByType DEFLATE application/javascript
   AddOutputFilterByType DEFLATE application/x-javascript
-  AddOutputFilterByType DEFLATE application/x-shockwave-flash
 </IfModule>
