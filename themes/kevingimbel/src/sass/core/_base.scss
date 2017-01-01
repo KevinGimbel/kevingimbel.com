@@ -99,10 +99,12 @@ ol {
 figure {
   margin: .75rem 0;
   line-height: 0;
+  background: #f1f1f1;
 }
 
 figure img {
-  margin: 0 !important;
+  margin: 0 auto !important;
+  display: block;
 }
 
 figcaption {
