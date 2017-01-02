@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# Source bash_profile
+
+source ~/.bash_profile
+
+# Path to the bare git repo for the project
+repository_path=/home/kvngmbl/repositories/kevingimbel.com
+
+# Path to the project itself
+project_path=/home/kvngmbl/subdomains/html
+
+# Hugo source
+hugo_file_path=/home/kvngmbl/hugosrc
+
+# CSS file location
+css_path=$hugo_file_path/themes/kevingimbel/static/css
+css_file=$css_path/style.css
+# Template where CSS file is included
+base_theme_file=$hugo_file_path/themes/kevingimbel/layouts/_default/baseof.html
+
+# Iterate over all branches (git push --all)
+while read oldrev newrev refname
+do
+    # Get the name of the current branch
+    branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+
+    # Checkout review
+    if [ "$branch" = "master" ]; then
+      git --work-tree=$hugo_file_path --git-dir=$repository_path checkout -f master
+
+      # Get checksum of file
+      file_shasum=$(shasum $css_file | awk -F' ' '{ print $1 }')
+
+      # declare name of new CSS file
+      new_css_file_name="style.$file_shasum.css"
+
+      # move style.css to the new CSS name (rename)
+      mv $css_file $css_path/$new_css_file_name
+
+      # replace name in template before hugo is build
+      sed -i "s/style\.css/${new_css_file_name}/g" $base_theme_file
+
+      hugo -b="https://kevingimbel.com" -d="$project_path" -s="$hugo_file_path"
+    fi
+done
