@@ -143,14 +143,14 @@ figcaption {
   margin-bottom: 6rem;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4 {
-  padding: 1rem 2rem;
-  padding-top: 0;
-}
+.content {
+  h1, h2, h3, h4, h5, h6, p {
+    padding: 1rem 2rem;
+    padding-top: 0;
+  }
 
-@media all and (min-width: 85rem) {
-  .content p, .content h1, .content h2, .content h3, .content h4, .article__footer {
-    padding: 0;
+  table {
+    margin-left: 2rem;
   }
 }
 
@@ -163,4 +163,29 @@ figcaption {
   background: #fff;
   border: none;
   height: 1px;
+}
+
+/**
+ * Tables
+ */
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f3f3f3;
+  border-top: 1px solid #aaa;
+  color: #000;
+  text-align: left;
+}
+
+td, tr, th {
+  padding: .5rem;
+  border-left: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+
+    &:last-of-type {
+      border-right: 1px solid #aaa;
+    }
 }
