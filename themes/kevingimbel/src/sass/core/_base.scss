@@ -97,28 +97,57 @@ ol {
 }
 
 figure {
-  margin: .75rem 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  margin-right: 0;
   line-height: 0;
-  background: #f1f1f1;
+  position: relative;
+
+    &:before {
+      content: '';
+      width: 50%;
+      background: $color-accent;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
 }
 
 figure img {
   margin: 0 auto !important;
   display: block;
+  position: relative;
+
+    &:hover {
+      z-index: 2;
+    }
 }
 
 figcaption {
-  background: #f1f1f1;
-  margin-top: -6px;
-  font-size: .75rem;
+  background: $color-accent;
   padding: .5rem;
+  font-size: .75rem;
+  color: #fff;
+  font-weight: bold;
   text-align: right;
-  color: #666;
+  position: absolute;
+  bottom: -1.25rem;
+  right: -1rem;
+  z-index: 1;
 
     p {
       padding: 0 !important;
       line-height: 2;
     }
+}
+
+@media all and (max-width: 75rem) {
+  figcaption {
+    right: 0;
+    text-align: left;
+  }
 }
 
 .page-inner {
