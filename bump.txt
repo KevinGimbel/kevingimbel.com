@@ -4,3 +4,4 @@
 [11/05/2016] Change source
 [01/02/2017] Test new deploy script
 [01/02/2017] Re-deploy
+[01/02/2017] FIX wrong variable
