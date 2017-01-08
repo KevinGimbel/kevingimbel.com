@@ -24,6 +24,26 @@
 
 .article__content ul {
   padding-left: 2rem;
+  padding-bottom: 1rem;
+  list-style: none;
+}
+
+.article__content ul li {
+  position: relative;
+  &:before {
+    content: '';
+    background: blue;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+    margin-right: .65rem;
+    border-radius: 50%;
+    position: absolute;
+    top: .5rem;
+    left: -1rem;
+  }
 }
 
 .article__footer {
