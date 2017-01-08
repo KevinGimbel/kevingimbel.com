@@ -22,13 +22,13 @@
   margin-top: 1rem;
 }
 
-.article__content ul {
+main ul {
   padding-left: 2rem;
   padding-bottom: 1rem;
   list-style: none;
 }
 
-.article__content ul li {
+main ul li {
   position: relative;
   &:before {
     content: '';
