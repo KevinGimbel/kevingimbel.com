@@ -104,14 +104,24 @@ figure {
   line-height: 0;
   position: relative;
 
-    &:before {
+    &:before,
+    &:after {
       content: '';
-      width: 50%;
       background: $color-accent;
-      height: 1px;
       position: absolute;
       bottom: 0;
+    }
+
+    &:before {
       right: 0;
+      height: 1px;
+      width: 50%;
+    }
+
+    &:after {
+      width: 1px;
+      height: 50%;
+      right: 50%;
     }
 }
 
@@ -119,9 +129,9 @@ figure img {
   margin: 0 auto !important;
   display: block;
   position: relative;
-
+  z-index: 2;
     &:hover {
-      z-index: 2;
+      z-index: 3;
     }
 }
 
@@ -135,7 +145,7 @@ figcaption {
   position: absolute;
   bottom: -1.25rem;
   right: -1rem;
-  z-index: 1;
+  z-index: 2;
 
     p {
       padding: 0 !important;
