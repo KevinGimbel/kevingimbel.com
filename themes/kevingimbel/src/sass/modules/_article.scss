@@ -22,17 +22,17 @@
   margin-top: 1rem;
 }
 
-main ul {
+.article__content ul {
   padding-left: 2rem;
   padding-bottom: 1rem;
   list-style: none;
 }
 
-main ul li {
+.article__content ul li {
   position: relative;
   &:before {
     content: '';
-    background: blue;
+    background: $color-accent;
     width: 10px;
     height: 10px;
     display: inline-block;
@@ -91,7 +91,7 @@ main ul li {
 .article-featured {
   width: 110%;
   margin-left: -5%;
-  background: blue;
+  background: $color-accent;
   padding: 2rem;
   color: #fff;
 

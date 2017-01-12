@@ -33,7 +33,10 @@ function uglify_single_file (file) {
 /* super-easy sass task using gulp-sass and compiling with node-sass and Libsass. Lightning fast, also! */
 gulp.task('sass', function () {
   gulp.src(path.src.sass + '/style.scss')
-    .pipe(prefix())
+    .pipe(prefix({
+      browser: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(gulp.dest(path.dest.css))
 });
