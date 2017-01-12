@@ -5,3 +5,4 @@
 [01/02/2017] Test new deploy script
 [01/02/2017] Re-deploy
 [01/02/2017] FIX wrong variable
+[12/01/2017] Triggering build
