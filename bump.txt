@@ -6,3 +6,4 @@
 [01/02/2017] Re-deploy
 [01/02/2017] FIX wrong variable
 [12/01/2017] Triggering build
+[01/13/2017] Trigger rebuild after building hugo with govendor
