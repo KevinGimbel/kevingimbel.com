@@ -25,7 +25,7 @@ do
     # Get the name of the current branch
     branch=$(git rev-parse --symbolic --abbrev-ref $refname)
 
-    # Checkout review
+    # Checkout master branch
     if [ "$branch" = "master" ]; then
       git --work-tree=$hugo_file_path --git-dir=$repository_path checkout -f master
 
