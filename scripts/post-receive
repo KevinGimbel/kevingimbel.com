@@ -5,13 +5,13 @@
 source ~/.bash_profile
 
 # Path to the bare git repo for the project
-repository_path=/home/kvngmbl/repositories/kevingimbel.com
+repository_path=$HOME/repositories/kevingimbel.com
 
 # Path to the project itself
-project_path=/home/kvngmbl/subdomains/html
+project_path=$HOME/subdomains/html
 
 # Hugo source
-hugo_file_path=/home/kvngmbl/hugosrc
+hugo_file_path=$HOME/hugosrc
 
 # CSS file location
 css_path=$hugo_file_path/themes/kevingimbel/static/css
