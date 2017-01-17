@@ -1,0 +1,41 @@
+.article__about {
+  display: flex;
+  align-items: center;
+  border: 10px solid $color-accent;
+  font-size: .9rem;
+}
+
+.about__image {
+  border-right: 10px solid $color-accent;
+  img {
+    display: block;
+    max-width: 10rem;
+    margin: 0;
+  }
+}
+
+.about__body p {
+  padding: 0 2rem;
+}
+
+.super-small {
+  font-size: .5rem;
+}
+
+@media all and (max-width: 60rem) {
+  .article__about {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .about__body p {
+    padding: 0;
+    padding-bottom: 1rem;
+    margin: 0 !important;
+  }
+
+  .about__image {
+    border: none;
+    margin-bottom: 1rem;
+  }
+}

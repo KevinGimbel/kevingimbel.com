@@ -48,6 +48,7 @@
 
 .article__footer {
   padding: 2rem;
+  padding-top: 0;
 }
 
 .article-home {
@@ -108,6 +109,19 @@
   color: #fff;
   line-height: 2rem;
   padding: 0 2rem !important;
+}
+
+.featured-article .featured__title:before {
+  content: '';
+  background: transparent;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -1rem;
+  left: -1rem;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid #920551;
+  border-bottom: 1rem solid transparent;
 }
 
 .featured__project {
