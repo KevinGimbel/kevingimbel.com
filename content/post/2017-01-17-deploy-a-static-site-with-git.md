@@ -105,4 +105,14 @@ hugo -b="https://kevingimbel.com" -d="$project_path" -s="$hugo_file_path"
 
 What's important is that the `post-receive` hook is executable, so you have to run `$ chmod +x post-receive` to set the `x` (or e`x`ecute) permission on the file.
 
+#### Pushing to the new repository
+
+To push your code to the new repository you need to add it as a [remote](https://git-scm.com/docs/git-remote) to your local git repository. To do so, use `git remote add` filling in the remote name and remote url parameters.
+
+```sh
+# git remote add $name $url
+$ git remote add production ssh://YOUR_USER@YOUR_SERVER:/home/YOUR_USER/repository/gitrepo
+```
+Afterwards you are able to push your code with `git push production master`.
+
 And that's it! This way I deploy and build my static site on my server using git. I am sure the script could be refactored and optimized more if I would dive deeper into git and git hooks - and I might do. At the moment it satisfies my needs and I am happy with it.
