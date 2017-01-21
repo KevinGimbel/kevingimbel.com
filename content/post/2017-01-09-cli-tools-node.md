@@ -38,7 +38,7 @@ Well, that has been a fun excursion into the world of shell scripting. Back to n
 Since we now know how to use a Shebang and how to invoke out Node scripts from the command line we may write a script. Let's keep it simple. We will greet the person executing the script.
 
 ```javascript
-#!/usr/local/env node
+#!/usr/bin/env node
 
 const sayHello = () => {
   console.log(`Hello, ${process.env.USER}`)
@@ -91,7 +91,7 @@ You can read more about exit codes in [the resources of TLDP](http://www.tldp.or
 
 So far we learned that Node CLI scripts:
 
-* need a shebang, `#!/usr/local/env node`
+* need a shebang, `#!/usr/bin/env node`
 * are written in regular JavaScript
 * can access the environment
 * can exit using `process.exit(exit_code)`
