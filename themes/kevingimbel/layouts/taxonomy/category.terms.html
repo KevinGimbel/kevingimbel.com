@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
+  <header class="page-header">
+    <h2 id="title">{{ .Title }}</h2>
+    <p id="desc">Below you can find a list of all categories.</p>
+  </header>
+
+  <ul class="tag-list">
+    {{ range $key, $value := .Data.Terms }}
+      <li aria-labeldby="tag-{{ $key }}"><a href="/categories/{{ $key | urlize }}" class="tag-list__link" title="View all posts categorized under {{ $key }}"><span id="tag-{{ $key }}">{{ $key }}</span></a></li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ end }}
