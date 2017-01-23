@@ -5,9 +5,10 @@
 }
 
 .article__header {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ddd;
   color: $color-accent--dark;
   margin-top: -2rem;
+  background: #f1f1f1;
 }
 
 .article__header a {
@@ -16,6 +17,12 @@
 
 .article__header p {
   padding: 0 2rem;
+}
+
+.article__header .title {
+  font-size: 3.25rem;
+  font-weight: lighter;
+  line-height: 1;
 }
 
 .article__content {
@@ -68,6 +75,7 @@
 .article__card-list {
   display: flex;
   flex-wrap: wrap;
+  background: #f1f1f1;
 }
 
 .article__card {
@@ -91,8 +99,7 @@
  */
 
 .article-featured {
-  width: 110%;
-  margin-left: -5%;
+  width: 100%;
   background: $color-accent;
   padding: 2rem;
   color: #fff;
@@ -105,14 +112,14 @@
 .featured__title {
   position: relative;
   bottom: -1rem;
-  left: -4rem;
+  left: -1rem;
   background: deeppink;
   color: #fff;
   line-height: 2rem;
   padding: 0 2rem !important;
 }
 
-.featured-article .featured__title:before {
+.featured__title:before {
   content: '';
   background: transparent;
   width: 0;
@@ -127,6 +134,7 @@
 
 .featured__project {
   padding: 2rem;
+  background: #f1f1f1;
 }
 
 
@@ -157,7 +165,7 @@
 blockquote {
   padding: 2rem;
   margin: 1rem 0;
-  background: #ddd;
+  background: #f1f1f1;
   font-family: monospace;
   position: relative;
   border-left: 5px solid deeppink;

@@ -11,6 +11,9 @@
     display: block;
     max-width: 10rem;
     margin: 0;
+      &:hover {
+        filter: saturate(5);
+      }
   }
 }
 

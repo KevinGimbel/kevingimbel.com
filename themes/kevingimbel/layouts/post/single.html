@@ -1,9 +1,10 @@
 {{ define "main" }}
   <header class="article__header" id="header">
     <div class="inner">
-      <h1 class="title">{{ .Title }}</h1>
-      <p>Estamate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <code>{{ .Params.categories }}</code></p>
-      <p>Tagged: {{ range .Params.tags }} <a href="/tags/{{ . }}">#{{ . }}</a> {{ end }}</p>
+      <h2 class="title">{{ .Title }}</h2>
+      <p>Estamate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <a href="/categories/{{ .Params.categories }}" title="See all posts categorized under {{ .Params.categories }}">{{ .Params.categories }}</a>
+      </p>
+      <p>{{ range .Params.tags }} <a href="/tags/{{ . }}" title="All posts tagged with {{ . }}">#{{ . }}</a> {{ end }}</p>
     </div>
   </header>
 
@@ -12,10 +13,9 @@
       {{ .Content }}
     </div>
   </section>
-
   <footer class="article__footer wrap">
     Found an issue? <a
-      href="http://github.com/kevingimbel/kevingimbel.com/blob/master/content/{{.File.Path}}">Edit this post on GitHub</a> or <a href="https://twitter.com/_kevinatari">let me know on Twitter</a>.
+      href="http://github.com/kevingimbel/kevingimbel.com/blob/master/content/{{ .File.Path }}">Edit this post on GitHub</a> or <a href="https://twitter.com/_kevinatari">let me know on Twitter</a>.
   </footer>
 
   {{ partial "about-the-author.html" }}
