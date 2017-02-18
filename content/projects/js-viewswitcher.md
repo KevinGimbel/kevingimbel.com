@@ -6,6 +6,8 @@ project_url: https://github.com/kevingimbel/viewSwitcher
 ---
 A very basic View Switcher for single-page Websites.
 
+<!--more-->
+
 See the [Full Page Example](https://kevingimbel.github.io/viewSwitcher/examples/fullpage/#start) or the [quick 'n dirty documentation](https://kevingimbel.github.io/viewSwitcher/#documentation) for more information. There's also a [CV example](https://kevingimbel.github.ioviewSwitcher/examples/cv) to show how to create a two language CV using viewSwitcher.
 
 ## Basic Usage

@@ -6,6 +6,8 @@ project_url: https://github.com/kevingimbel/lazyLoad
 ---
 LazyLoad.js is a small, single purpose JavaScript to lazy load assets like images once they're inside the viewport.
 
+<!--more-->
+
 ### Setup
 
 Default Usage:

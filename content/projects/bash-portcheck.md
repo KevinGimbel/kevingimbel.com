@@ -8,6 +8,8 @@ A small utility script to check for open ports using TCP.
 
 Taken from [StackOverflow](http://stackoverflow.com/a/35337930/2777153) and wrapped inside a little function.
 
+<!--more-->
+
 ### Install
 Clone this repository to some place on your computer.
 

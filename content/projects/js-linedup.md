@@ -8,6 +8,8 @@ LinedUp is an app/website I build to get into Node.js, MongoDB and ExpressJS. It
 collection of concerts I've been to that I'm aiming to update so it soon holds
 all concerts I've ever been to. Getting together all information is quite a task.
 
+<!--more-->
+
 [Live Demo](http://concerts.kevingimbel.me)
 
 ### Stack

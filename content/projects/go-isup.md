@@ -6,6 +6,8 @@ project_url: https://github.com/kevingimbel/isup.go
 ---
 Go executable to check if a remote host is available or not. First argument passed is the URL to check.
 
+<!--more-->
+
 ### Install
 1. [Install Go](https://golang.org/doc/install#install).
 2. Clone the repo `git clone https://github.com/kevingimbel/isup.go.git`

@@ -6,9 +6,11 @@ project_url: https://github.com/kevingimbel/colog
 ---
 Create colorful terminal logs with configurable defaults for Success, Warning, Error, and Info levels as well as time and log formats. Wraps around the excellent color.go package by [fatih](https://github.com/fatih/color/).
 
+<!--more-->
+
 ### Example
 
-```go
+```
 package main
 
 import (

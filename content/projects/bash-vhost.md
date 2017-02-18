@@ -7,6 +7,8 @@ project_url: https://github.com/kevingimbel/vhost
 
 `vhost` is a command line utility for creating new Virtual Hosts for the Apache Server. It was build out of laziness. Currently the script supports creating files for the Apache Web Server. Nginx support is on the roadmap but due to my lack of Nginx knowledge currently far away.
 
+<!--more-->
+
 **NOTE:** `vhost` has only been tested on Ubuntu 14.04 running Apache 2.4.7! On other Linux Distributions most used programms (`rm`, `cp`, `sed`, `sudo`) should be available. It could happen that things go bad and you break your local Server. Be warned!
 
 With a Linux Distribution similar to Ubuntu (such as Kubuntu, Lubuntu, etc.) you should be good to go. Other Linux Distributions as well as OS X most likely need to adjust the script as needed.

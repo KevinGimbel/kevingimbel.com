@@ -6,6 +6,8 @@ project_url: https://github.com/kevingimbel/goserve
 ---
 Executable around the Go HTTP Server. Used to serve static files from a directory.
 
+<!--more-->
+
 ### Install
 1. [Install Go](https://golang.org/doc/install#install).
 2. Clone the repo `git clone https://github.com/kevingimbel/goserve.git`
