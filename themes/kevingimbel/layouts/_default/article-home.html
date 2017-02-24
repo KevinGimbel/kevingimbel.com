@@ -1,9 +1,10 @@
-<div class="article__home" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+<article class="article__home" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
   <h3 class="h2" id="heading-{{ .UniqueID }}"><a href="{{ .Permalink }}" title="Read more about {{ .Title }}" tabindex="1">{{ .Title }}</a></h3>
   <div class="article-home__body" id="description-{{ .UniqueID }}">
     <p>{{ .Summary | plainify | safeHTML }}
     {{ if .Truncated }}
-    ...<a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Continue reading</a>
+    <span class="no-speak">…</span> <br>
+    <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Read more about "{{ .Title }}"</a>
     {{ end }}</p>
   </div>
-</div>
+</article>

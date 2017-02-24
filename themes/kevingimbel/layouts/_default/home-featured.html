@@ -1,9 +1,9 @@
-<div class="article__home article-featured" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
-  <h3 class="h2" id="heading-{{ .UniqueID }}"><a href="{{ .Permalink }}" title="Read more about {{ .Title }}" tabindex="1">{{ .Title }}</a></h3>
+<article class="article__home article-featured" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+  <h2 id="heading-{{ .UniqueID }}"><a href="{{ .Permalink }}" title="Read more about {{ .Title }}" tabindex="1">{{ .Title }}</a></h2>
   <div class="article-home__body" id="description-{{ .UniqueID }}">
     <p>{{ .Summary | plainify | safeHTML }}
     {{ if .Truncated }}
-    ...<a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Continue reading</a>
+    <span class="no-speal">…</span> <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Continue reading "{{ .Title }}"</a>
     {{ end }}</p>
   </div>
-</div>
+</article>

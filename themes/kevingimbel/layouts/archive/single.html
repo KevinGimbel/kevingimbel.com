@@ -13,7 +13,7 @@
 
   {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
     <section id="{{ .Key }}">
-      <h4 class="h1 featured__title">{{ .Key }}</h4>
+      <h3 class="h1 featured__title">{{ .Key }}</h3>
       <div class="article__card-list">
         {{ range .Pages }}
           {{ .Render "card" }}
