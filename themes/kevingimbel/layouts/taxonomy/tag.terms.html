@@ -2,14 +2,17 @@
 <section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
   <header class="page-header">
     <h2 id="title">{{ .Title }}</h2>
-    <p id="desc">Below you can find a list of all tags. Click on a tag to see all posts tagged with the tag.</p>
+    <p id="desc">Below you can find a list of all tags. Click on a tag to see all posts tagged or click on an article directly to view it.</p>
   </header>
 
-  <ul class="tag-list">
-    {{ range $key, $value := .Data.Terms }}
-      <li aria-labeldby="tag-{{ $key }}"><a href="/tags/{{ $key | urlize }}" class="tag-list__link" title="View all posts tagged under {{ $key }}"><span class="no-speak">#</span><span id="tag-{{ $key }}">{{ $key }}</span></a></li>
-    {{ end }}
-  </ul>
+  {{ range $key, $value := .Data.Terms }}
+    <h3 aria-labeldby="tag-{{ $key }}"><a href="/tags/{{ $key | urlize }}" title="View all posts tagged under {{ $key }}"><span class="no-speak">#</span><span id="tag-{{ $key }}">{{ $key }}</span></a></h3>
+    <ul class="tag-list">
+      {{ range $_, $page := $value.Pages }}
+        <li><a href="{{ $page.Permalink }}" title="Read {{ $page.Title }}" class="tag-list__link">{{ $page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
 </section>
 
 {{ end }}

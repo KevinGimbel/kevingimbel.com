@@ -58,3 +58,31 @@
     margin: 2rem 0;
   }
 }
+
+.featured-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-top: 1px solid;
+  padding: 2rem 0;
+}
+
+.featured__project {
+  width: 33%;
+}
+
+@media all and (max-width: 60rem) {
+  .featured__project {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 40rem) {
+  .featured__project {
+    width: 100%;
+  }
+
+  .featured-projects {
+    flex-direction: column;
+  }
+}

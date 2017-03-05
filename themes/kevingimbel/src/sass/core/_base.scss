@@ -29,6 +29,21 @@ a {
     }
 }
 
+a[href*="amzn.to"] {
+  position: relative;
+  padding-right: 10px;
+  &:after {
+    content: "R";
+    font-size: .35rem;
+    font-weight: bold;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 0 3px;
+    margin-left: 1px;
+  }
+}
+
 a:focus {
   background: $color-accent--dark !important;
   color: #fff !important;
