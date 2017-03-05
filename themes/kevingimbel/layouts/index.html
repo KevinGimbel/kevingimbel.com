@@ -14,11 +14,13 @@
 
 <section class="home-section">
   <p class="h6 featured__title">Latest Projects</p>
-  {{ range first 3 (where .Data.Pages "Section" "projects") }}
-    <div class="featured__project">
-      {{ .Render "article-home" }}
-    </div>
-  {{ end }}
+  <div class="featured-projects">
+    {{ range first 3 (where .Data.Pages "Section" "projects") }}
+      <div class="featured__project">
+        {{ .Render "article-home" }}
+      </div>
+    {{ end }}
+  </div>
 </section>
 
 {{ end }}

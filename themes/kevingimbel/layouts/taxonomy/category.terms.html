@@ -7,7 +7,7 @@
 
   <ul class="tag-list">
     {{ range $key, $value := .Data.Terms }}
-      <li aria-labeldby="tag-{{ $key }}"><a href="/categories/{{ $key | urlize }}" class="tag-list__link" title="View all posts categorized under {{ $key }}"><span id="tag-{{ $key }}">{{ $key }}</span></a></li>
+      <li aria-labeldby="tag-{{ $key }}"><a href="/categories/{{ $key | urlize }}" class="tag-list__link" title="View all posts categorized under {{ $key }}"><span id="tag-{{ $key }}">{{ $key }} (<b>{{ $value.Count }}</b>)</span></a></li>
     {{ end }}
   </ul>
 </section>
