@@ -199,7 +199,12 @@ figcaption {
 }
 
 .home-section {
-  margin-bottom: 6rem;
+  max-width: 80rem;
+  margin: 3rem auto 6rem;
+
+      @media all and (max-width: 80rem) {
+        margin: 0 auto 6rem;
+      }
 }
 
 .content {
@@ -209,7 +214,7 @@ figcaption {
   }
 
   table {
-    margin-left: 2rem;
+    margin: 1.25rem 2rem;
   }
 }
 
