@@ -24,7 +24,7 @@ In this tutorial we will customize the Prompt. To do so, we will use VIM, a comm
 
 {{% figure src="/images/posts/2017/terminal/prompt/vim-empty-file.png" caption="An empty file opened in VIM" %}}
 
-To start writing text we need to enter Input Mode. This is done by typing an `i`. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press `ESC`. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (`SHIFT+g`) or bottom of a file (`SHIFT+G`). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.
+To start writing text we need to enter Input Mode. This is done by typing an `i`. Afterwards, we can write. VIM has three different modes: Input, Visual and Normal. To leave a mode and return to normal, you need to press `ESC`. Visual Mode can be used to select multiple lines or copy/paste things around. Insert Mode is mainly used for writing text and Normal Mode is used for navigation, e.g to move to the Top of a file (`gg`) or bottom of a file (`SHIFT+G`). VIM works a lot with shortcuts which is why we can edit text files so fast with it. Consider the following example HTML tag.
 
 ```html
 <div class="some-class-name another-class-name yet more classes"></div>
@@ -129,7 +129,7 @@ So that's it for the first part of customizing and using the terminal. Below are
 | `tput setaf` | Set forground color using [ANSI escape](https://en.wikipedia.org/wiki/ANSI_escape_code) |
 | `tput setab` | Set background color using [ANSI escape](https://en.wikipedia.org/wiki/ANSI_escape_code) |
 
-And here are the 8 color codes you can combine with `tput setaf` and `tput setaf`.
+And here are the 8 color codes you can combine with `tput setaf` and `tput setab`.
 
 | Code | Color |
 |---------|--------|
