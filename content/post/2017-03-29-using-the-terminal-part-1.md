@@ -1,5 +1,5 @@
 ---
-title: " Using the Terminal: The Prompt"
+title: "Using the Terminal: The Prompt"
 categories: coding
 tags:
   - workflow

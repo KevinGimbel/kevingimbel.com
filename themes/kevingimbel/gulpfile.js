@@ -34,7 +34,7 @@ function uglify_single_file (file) {
 gulp.task('sass', function () {
   gulp.src(path.src.sass + '/style.scss')
     .pipe(prefix({
-      browser: ['last 2 versions'],
+      browser: ['last 2 versions', '>1%'],
       cascade: false
     }))
     .pipe(sass({ outputStyle: 'compressed' }))

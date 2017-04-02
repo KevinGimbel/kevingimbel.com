@@ -16,14 +16,22 @@
   font-size: 2rem;
 }
 
-.site__header h2 {
-  font-size: 1rem;
+.title-small {
+  font-size: .8rem;
 }
 
+.header-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @media all and (min-width: 85rem) {
   .site__header {
     padding: 3rem 0;
+    text-align: center;
   }
 
   .site__header h1 {
@@ -34,4 +42,11 @@
     font-size: 2rem;
     margin-left: .5rem;
   }
+}
+
+@media all and (max-width: 50rem) {
+    .header-flex {
+      justify-content: center;
+      flex-direction: column;
+    }
 }
