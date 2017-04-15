@@ -1,5 +1,10 @@
 ---
 title: "Now"
+menu:
+  main:
+      Name: "Now"
+      Weight: 1100
+      Title: "Lorem Ipsum"
 ---
 
 What am I doing now?

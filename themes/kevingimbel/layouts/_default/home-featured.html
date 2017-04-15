@@ -3,7 +3,7 @@
   <div class="article-home__body" id="description-{{ .UniqueID }}">
     <p>{{ .Summary | plainify | safeHTML }}
     {{ if .Truncated }}
-    <span class="no-speal">…</span> <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Continue reading "{{ .Title }}"</a>
+    <span class="no-speal">…</span><br> <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">Continue reading "{{ .Title }}"</a>
     {{ end }}</p>
   </div>
 </article>

@@ -25,8 +25,31 @@
   {{ end }}
 </head>
 <body lang="en">
-
-{{- partial "header.html" -}}
+  <header class="site__header">
+    <div class="wrap">
+      <div class="header-flex">
+        <div class="flex-item">
+          <h1>Kevin Gimbel</h1>
+          <p class="title-small">Developer &amp; <span id="word_switch">video game enthusiast</span></p>
+        </div>
+        <div class="flex-item">
+          <nav>
+            <ul class="flex navigation">
+              {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+              <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>
+                <a href="{{ .URL }}" title="{{ .Name }}">
+                  {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+              </li>
+              {{end}}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
 
 <main class="content">
   {{ block "main" . }}

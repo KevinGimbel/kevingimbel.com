@@ -7,11 +7,15 @@
   }
 }
 
+.navigation li.active a {
+  border-bottom-color: #e91e63;
+}
+
 @media all and (max-width: 30rem) {
   .navigation {
     margin-top: 1rem;
   }
-  
+
   .navigation li {
     width: 50%;
     text-align: center;

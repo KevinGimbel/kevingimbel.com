@@ -12,6 +12,13 @@ canonifyurls:  true
 
 enableEmoji: true
 
+menu:
+  main:
+    - Name: "Home"
+      URL: "/"
+      Weight: 10
+      Identifier: "home"
+
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
 permalinks:
@@ -21,4 +28,4 @@ permalinks:
 
 params:
   author: "Kevin Gimbel"
-  description: "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, musici, and arts."
+  description: "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, music, and arts."
