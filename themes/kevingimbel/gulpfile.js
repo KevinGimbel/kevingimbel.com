@@ -16,6 +16,9 @@ var path = {
   dest: {
     css: './static/css',
     js: './static/js'
+  },
+  partial: {
+    css: './layouts/partials'
   }
 }
 
@@ -39,10 +42,18 @@ gulp.task('sass', function () {
     }))
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(gulp.dest(path.dest.css))
+
+    gulp.src(path.src.sass + '/inline.scss')
+      .pipe(prefix({
+        browser: ['last 2 versions', '>1%'],
+        cascade: false
+      }))
+      .pipe(sass({ outputStyle: 'compressed' }))
+      .pipe(gulp.dest(path.partial.css))
 });
 
 gulp.task('js', function () {
-  gulp.src(path.src.js + '/**/*.js')
+  gulp.src(path.src.js + '/main.js')
   // transform the files here.
   .pipe(rollup({
     // any option supported by Rollup can be set here.
