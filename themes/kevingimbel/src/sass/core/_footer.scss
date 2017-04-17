@@ -24,3 +24,16 @@
     margin-top: 0;
   }
 }
+
+.flex-footer {
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+
+@media all and (max-width: 50rem) {
+  .flex-footer{
+    flex-direction: column;
+  }
+}

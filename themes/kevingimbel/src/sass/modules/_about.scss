@@ -1,16 +1,20 @@
 .article__about {
   display: flex;
-  align-items: center;
-  border: 10px solid $color-accent;
+  border: 1px solid #ddd;
+  border-top: 10px solid $color-accent;
   font-size: .9rem;
+  padding-top: 1rem;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 .about__image {
-  border-right: 10px solid $color-accent;
+  // border-right: 10px solid $color-accent;
   img {
     display: block;
     max-width: 10rem;
     margin: 0;
+    border-radius: 50%;
       &:hover {
         filter: saturate(5);
       }
@@ -40,5 +44,12 @@
   .about__image {
     border: none;
     margin-bottom: 1rem;
+  }
+}
+
+@media all and (min-width: 60rem) {
+  .about__image {
+    border-right: 1px solid #ccc;
+    padding-right: 2rem;
   }
 }
