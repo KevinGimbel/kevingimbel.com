@@ -2,7 +2,7 @@
   <header class="article__header" id="header">
     <div class="inner">
       <h2 class="title">{{ .Title }}</h2>
-      <p>Estamate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <a href="/categories/{{ .Params.categories }}" title="See all posts categorized under {{ .Params.categories }}">{{ .Params.categories }}</a>
+      <p>Estimate reading time {{ .ReadingTime }} minutes ({{ .WordCount }} words), categorized under <a href="/categories/{{ .Params.categories }}" title="See all posts categorized under {{ .Params.categories }}">{{ .Params.categories }}</a>
       </p>
       <p>{{ range .Params.tags }} <a href="/tags/{{ . }}" title="All posts tagged with {{ . }}">#{{ . }}</a> {{ end }}</p>
     </div>
