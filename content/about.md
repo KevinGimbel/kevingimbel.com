@@ -1,9 +1,5 @@
 ---
 title: "About"
-menu:
-  main:
-      Name: "About"
-      Weight: 200
 ---
 
 Hey! My name is Kevin Gimbel and I am a Full-Stack Developer at [Synoa GmbH](https://synoa.de). I enjoy good ~~tea~~ ~~coffee~~ tea and coffee and like to play video games or go to concerts.
