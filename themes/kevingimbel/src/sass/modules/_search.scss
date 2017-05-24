@@ -1,0 +1,40 @@
+.search-input {
+  width: 100%;
+  display: block;
+  padding: .5rem 1rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  border: 1px solid $color-accent;
+  border-radius: 3px;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px $color-accent;
+    }
+}
+
+.search-results {
+  margin: 1rem 0 !important;
+  padding: .5rem 0;
+  text-transform: capitalize;
+  list-style: none;
+}
+
+.search__item {
+  display: block;
+  padding: .5rem;
+  transition: all .2s ease-out;
+    &:hover {
+      text-indent: .5rem;
+    }
+}
+
+.search__item-date {
+  font-size: .75rem;
+  margin-left: .5rem;
+}
+
+.search-wrap {
+
+  padding: 0 2rem;
+}

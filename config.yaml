@@ -4,7 +4,7 @@ theme: "kevingimbel"
 title: "Kevin Gimbel — Developer"
 
 PygmentsStyle: "native"
-PygmentsUseClasses: false
+PygmentsUseClasses: true
 PygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
 
@@ -17,7 +17,7 @@ menu:
     - Name: "Home"
       URL: "/"
       Weight: 1
-      
+
     - Name: "Posts"
       URL: "/archive/"
       Weight: 100
@@ -29,6 +29,10 @@ menu:
     - Name: "About"
       URL: "/about/"
       Weight: 300
+
+    - Name: "Search"
+      URL: "/search/"
+      Weight: 900
 
     - Name: "Now"
       URL: "/now/"

@@ -1,0 +1,6 @@
+[{{- range where .Site.Pages "Section" "post" -}}
+{{- $title := (lower .Title) -}}
+{{- $content := (lower .Plain) -}}
+{{- $date := (.Date.Format "01.Jan 2006") -}}
+  {{- dict "title" $title "content" $content "permalink" .Permalink "date" $date | jsonify -}},
+{{- end -}}{}]

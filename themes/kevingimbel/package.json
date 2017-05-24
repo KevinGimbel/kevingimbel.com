@@ -10,5 +10,9 @@
     "gulp-rollup": "^2.5.1",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.1"
+  },
+  "dependencies": {
+    "promise-polyfill": "6.0.2",
+    "whatwg-fetch": "^2.0.3"
   }
 }
