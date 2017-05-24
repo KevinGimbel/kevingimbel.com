@@ -94,7 +94,7 @@ ol {
 
 .content {
   min-height: 60vh;
-  padding: 2rem 0;
+  padding: 4rem 0 2rem 0;
 
   img {
     margin: 1rem auto;
@@ -162,7 +162,8 @@ figcaption {
   bottom: -1.25rem;
   right: -1rem;
   z-index: 2;
-
+  transform: skewY(2deg);
+  
     p {
       padding: 0 !important;
       line-height: 2;
