@@ -59,5 +59,8 @@
 {{- partial "footer.html" -}}
 {{- partial "tracking.html" -}}
 {{- partial "svg.html" -}}
+{{ range .Page.Params.scripts }}
+<script type="text/javascript" src="{{ . }}"></script>
+{{ end }}
 </body>
 </html>

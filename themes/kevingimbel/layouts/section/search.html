@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="page wrap" aria-labeldyby="title" aria-describedby="desc">
+  <header class="page-header">
+    <h2 id="title">{{ .Title }}</h2>
+  </header>
+  <div class="page-body" id="desc">
+    {{ .Content }}
+    <div class="search-wrap">
+      <input type="text" placeholder="Type to search" id="search" class="search-input" />
+      <ul id="results" class="search-results"></ul>
+    </div>
+  </div>
+</section>
+{{ end }}
