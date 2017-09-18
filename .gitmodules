@@ -1,3 +1,0 @@
-[submodule "themes/a11y"]
-	path = themes/a11y
-	url = git@github.com:kevingimbel/hugo-a11y-theme.git
