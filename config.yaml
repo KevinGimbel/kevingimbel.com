@@ -1,6 +1,5 @@
-baseurl: "https://kevingimbel.com/"
 languageCode: "en-us"
-theme: "a11y"
+theme: "next"
 title: "Kevin Gimbel — Developer"
 
 PygmentsStyle: "native"
@@ -29,10 +28,6 @@ menu:
     - Name: "About"
       URL: "/about/"
       Weight: 300
-
-    - Name: "Search"
-      URL: "/search/"
-      Weight: 900
 
     - Name: "Now"
       URL: "/now/"

@@ -1,0 +1,8 @@
+<footer class="site-footer" role="contentinfo">
+  {{ if .Site.Params.Footer.Copyright }}
+    <p>{{ .Site.Params.Footer.Copyright | safeHTML }}</p>
+  {{ end }}
+  {{ if .Site.Params.Footer.Description }}
+    <p>{{ .Site.Params.Footer.Description | safeHTML }}</p>
+  {{ end }}
+</footer>

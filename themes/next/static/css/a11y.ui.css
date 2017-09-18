@@ -1,0 +1,23 @@
+/**
+ * Tooltips used for `abbr` tags
+ */
+.tooltip {
+  position: absolute;
+  width: 20rem;
+  height: auto;
+  background: #fff;
+  border: 1px solid #000;
+  padding: .5rem;
+}
+
+.tooltip:before {
+  content: 'X';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: .5rem;
+  background: #ddd;
+  padding: 0 .25rem;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="a11y-page-single" aria-labelledby="page-title" aria-describedby="page-desc">
+  <header class="a11y-page-single__header">
+    <h2 id="page-title">{{ .Title }}</h2>
+  <small>
+    {{ if (.Page.Section) "post" }}
+      Published on <time>{{ .Date.Format "02 January 2006" }}</time><br>
+    {{- with .WordCount -}}
+      {{ . }} words.
+    {{- end -}}
+    {{- with .ReadingTime -}} Average read time: {{ . }} minutes.{{- end -}}
+    {{ end }}
+  </small>
+      <hr>
+  </header>
+  <div class="a11y-page-single__content" id="page-desc">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

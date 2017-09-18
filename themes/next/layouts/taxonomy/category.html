@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section class="page wrap" aria-labeldyby="page-title" aria-describedby="page-desc">
+    <header class="page-header">
+        <h2 id="page-title">{{ .Title }}</h2>
+    </header>
+    {{ with .Content }}
+      <div class="page-body" id="page-desc">
+        {{ . }}
+      </div>
+    {{ end }}
+
+  <hr>
+
+  <ul class="a11y-post__list">
+    {{ range .Data.Pages }}
+        <li>
+          <article class="a11y-post-list__post" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+            <header class="a11y-post-list__post-header">
+              <h4 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
+                <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">{{ .Title }}</a>
+              </h4>
+              <small>Published on <time>{{ .Date.Format "Monday, 02, 2006" }}</time><br>
+                {{ .WordCount }} words. Average read time: {{ .ReadingTime }} minutes.</small>
+            </header>
+            <div class="a11y-post-list__post-excerpt" id="description-{{ .UniqueID }}">
+              <p>{{ .Summary | plainify | safeHTML }}
+              {{ if .Truncated }}
+              {{ end }}</p>
+            </div>
+          </article>
+        </li>
+    {{ end }}
+  </ul>
+
+  </section>
+{{ end }}

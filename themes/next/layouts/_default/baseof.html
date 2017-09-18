@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <title>{{ block "title" . }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  {{ .Hugo.Generator }}
+  <link rel="stylesheet" href="/css/a11y.base.css">
+  <link rel="stylesheet" href="/css/a11y.ui.css">
+  {{ with .Site.Params.Author.Name }}
+  <meta name="author" content="{{ . }}">
+  {{ end }}
+  <script type="text/javascript" src="/js/a11y.base.js"></script>
+</head>
+<body class="a11y__page-grid">
+<!-- This snippet loads the custom CSS rules saved in localStorage. It is placed here so that it can be executed as fast as possible to avoid Flash of Unstyles Content. -->
+<script type="text/javascript">(function(){if(localStorage.getItem('a11y_settings')){var cssRules=JSON.parse(localStorage.getItem('a11y_settings'));for(var rule in cssRules){document.documentElement.style.setProperty(rule,cssRules[rule])}; if(a11y) { a11y.savedSettings = cssRules }}}());</script>
+
+  {{ partial "settings.html" }}
+
+  <div class="a11y__skip-container">
+    <a href="#maincontent" class="a11y__skip-link">Skip to content</a>
+    <a href="#navigation" class="a11y__skip-link">Skip to navigation</a>
+  </div>
+  <div class="a11y__f-right a11y__settings-wrap">
+    <button id="dark-mode" class="a11y__btn a11y__btn--medium" title="Toggle dark mode">Dark mode</buton>
+    <button id="font-increase" class="a11y__btn a11y__btn--medium" title="Increase font size">Aa+</button>
+    <button id="font-decrease" class="a11y__btn a11y__btn--medium" title="Decrease font size">Aa-</button>
+    <a href="#settings" onclick="return false;" id="settings-trigger">Settings</a>
+  </div>
+
+  <header class="site-header">
+    {{ partial "header.html" . }}
+  </header>
+
+  <main class="content" role="main" id="maincontent">
+      {{- block "main" . -}}
+        <!-- The part of the page that begins to differ between templates -->
+      {{- end -}}
+    </main>
+
+
+  {{ partial "footer.html" . }}
+
+  <div class="a11y__overlay"></div>
+  <script async type="text/javascript" src="/js/a11y.ui.js"></script>
+  <script async type="text/javascript" src="/js/a11y.settings.js"></script>
+</body>
+</html>
