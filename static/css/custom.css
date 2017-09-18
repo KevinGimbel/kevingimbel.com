@@ -1,0 +1,139 @@
+body {
+  border: none;
+  max-width: 100vw;
+  padding-top: 2rem;
+}
+
+body.homepage {
+  padding-top: 6rem;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.side-by-side .small {
+  max-width: 40%;
+  padding: 4rem;
+}
+
+.side-by-side .bg {
+  background: var(--color-accent-primary);
+  color: var(--color-accent-primary-fg);
+}
+
+.side-by-side .wide {
+  max-width: 60%;
+}
+
+.side-by-side img,
+.side-by-side figure {
+  max-width: 100%;
+  margin: 0;
+}
+body.homepage {
+  padding-top: 100px;
+}
+
+.site-header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 6;
+  padding: 2rem 0 2rem 2rem;
+}
+
+.content {
+  grid-column: 3 / 13;
+  padding: 2rem;
+}
+
+@media all and (max-width: 50rem) {
+  .site-header,
+  .content {
+    grid-column: 1 / 13;
+  }
+}
+
+.a11y-nav-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding-left: 0;
+}
+
+.a11y-nav-main__nav-item {
+  font-size: 1.25rem;
+}
+.a11y-nav-main__nav-item,
+.a11y-nav-main__nav-item a {
+  display: block;
+  width: 100%;
+}
+.a11y-nav-main__nav-item a {
+  background: none;
+  border: none;
+  line-height: 2;
+  padding: .25rem 0;
+  margin: .25rem 0;
+}
+
+.a11y-nav-main__nav-item.active a {
+  border: none;
+  background: var(--color-accent-secondary);
+  color: var(--color-accent-secondary-fg);
+  padding-left: 1rem;
+}
+
+.nav__trigger {
+  display: none;
+}
+
+figure {
+  margin-left: -2rem;
+}
+
+@media all and (max-width: 50rem) {
+
+  .content {
+    grid-row: 1;
+  }
+
+  .a11y-site__description {
+    display: none;
+  }
+
+  nav.a11y-nav-main__wrap:not(.open) {
+    display: none;
+  }
+
+  nav.a11y-nav-main__wrap.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    height: 100vh;
+    z-index: 999;
+  }
+  .nav__trigger {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.25rem;
+    z-index: 1000;
+  }
+  nav.a11y-nav-main__wrap.open a {
+    border-bottom: 1px solid currentColor;
+  }
+
+  figure {
+    margin: 2rem 0;
+  }
+}

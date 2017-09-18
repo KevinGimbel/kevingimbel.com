@@ -1,6 +1,6 @@
 baseurl: "https://kevingimbel.com/"
 languageCode: "en-us"
-theme: "kevingimbel"
+theme: "a11y"
 title: "Kevin Gimbel — Developer"
 
 PygmentsStyle: "native"
@@ -46,5 +46,11 @@ permalinks:
   project: "/projects/:title/"
 
 params:
-  author: "Kevin Gimbel"
-  description: "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, music, and arts."
+  author:
+    name: "Kevin Gimbel"
+  description: |
+    Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, music, and arts.
+  footer:
+    copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com\">Kevin Gimbel</a>"
+    description: |
+      <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>.</small>

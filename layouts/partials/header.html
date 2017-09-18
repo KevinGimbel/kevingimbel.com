@@ -1,0 +1,27 @@
+{{ if not (.IsHome) }}
+  {{ if (isset .Site.Params.Settings.Header "DisplayTitles") }}
+    {{ with .Site.Title }}
+    <h1 class="a11y-site__title">{{ . }}</h1>
+    {{ end }}
+    {{ with .Site.Params.Subtitle }}
+      <h2 class="a11y-site__sub-title">{{ . }}</h2>
+    {{ end }}
+  {{ end }}
+  {{ with .Site.Params.Description }}
+    <p class="a11y-site__description">{{ . }}</p>
+  {{ end }}
+{{ end }}
+<button id="nav-mobile-trigger" class="a11y__btn a11y__btn--medium nav__trigger">MENU</button>
+<nav role="navigation" id="navigation" aria-label="Main Navigation" class="a11y-nav-main__wrap">
+  <ul class="a11y-nav-main">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li class="a11y-nav-main__nav-item {{if $currentPage.IsMenuCurrent "main" . }} active{{end}}">
+      <a href="{{ .URL }}" title="Go to {{ .Name }}">
+        {{ .Pre }}
+          <span>{{ .Name }}</span>
+      </a>
+    </li>
+    {{end}}
+  </ul>
+</nav>

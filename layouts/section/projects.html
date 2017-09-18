@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="page wrap" aria-labeldyby="page-title" aria-describedby="page-desc">
+  <nav id="post-nav" class="post-nav" role="navigation">
+    {{ range (where .Site.Pages "Section" "projects").GroupByParam "language" }}
+      <a class="post-nav__link" href="#{{ .Key }}">Skip to {{ .Key }}</a>
+    {{ end }}
+  </nav>
+
+  {{ range (where .Site.Pages "Section" "projects").GroupByParam "language" }}
+    <section id="{{ .Key }}" class="a11y-post-list__wrapper" aria-labelledby="title-{{ .Key }}">
+      <header class="a11y-post-list__section-header">
+        <h3 class="a11y-post-list__section-title" id="title-{{ .Key }}">{{ .Key }}</h3>
+        <small>(<a href="#post-nav">Return to navigation</a>)</small>
+      </header>
+      <ul class="a11y-post__list">
+        {{ range .Pages }}
+        {{ if ne .WordCount  0 }}
+        <li>
+          <article class="a11y-post-list__post" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+            <header class="a11y-post-list__post-header">
+              <h4 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
+                <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">{{ .Title }}</a>
+              </h4>
+              <small>Published on <time>{{ .Date.Format "02 January 2006" }}</time><br>
+                {{ .WordCount }} words. Average read time: {{ .ReadingTime }} minutes.</small>
+            </header>
+            <div class="a11y-post-list__post-excerpt" id="description-{{ .UniqueID }}">
+              <p>{{ .Summary | plainify | safeHTML }}
+              {{ if .Truncated }}
+              {{ end }}</p>
+            </div>
+          </article>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+</section>
+{{ end }}
