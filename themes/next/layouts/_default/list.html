@@ -29,7 +29,7 @@
         {{ range .Pages }}
         {{ if ne .WordCount  0 }}
         <li>
-          <article class="a11y-post-list__post" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+          <article class="a11y-post-list__post" aria-labelledby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
             <header class="a11y-post-list__post-header">
               <h4 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
                 <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">{{ .Title }}</a>
