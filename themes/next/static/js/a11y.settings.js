@@ -151,12 +151,12 @@
 
     darkModeTrigger.addEventListener('click', function(e) {
       var el = event.target;
-      if(lsSettings['--body-invert'] == 0) {
+      if(lsSettings['--body-invert'] == 0 || !lsSettings['--body-invert']) {
         lsSettings['--body-invert'] = 100;
-        el.textContent = 'Light mode';
+        document.body.classList.add('dark-mode');
       } else {
         lsSettings['--body-invert'] = 0;
-        el.textContent = 'Dark mode';
+        document.body.classList.remove('dark-mode');
       }
       document.documentElement.style.setProperty('--body-invert', lsSettings['--body-invert']);
       localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));

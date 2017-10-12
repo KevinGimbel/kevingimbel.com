@@ -8,11 +8,19 @@ body.homepage {
   padding-top: 6rem;
 }
 
+body.dark-mode #dark-mode:before {
+  content: "Disable ";
+}
+
 .side-by-side {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 2rem 0;
+}
+
+.side-by-side__off-left {
+  margin-left: -20vw;
 }
 
 .side-by-side .small {
@@ -93,6 +101,22 @@ body.homepage {
 
 figure {
   margin-left: -2rem;
+}
+
+@media all and (max-width: 60rem) {
+  .side-by-side {
+    flex-direction: column;
+  }
+
+  .side-by-side__off-left {
+    margin-left: auto;
+  }
+
+  .side-by-side .small,
+  .side-by-side .wide  {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media all and (max-width: 50rem) {

@@ -67,6 +67,12 @@ body {
   filter: invert(var(--body-invert, 0));
 }
 
+body.dark-mode img,
+body.dark-mode video,
+body.dark-mode iframe {
+  filter: invert(100%) !important;
+}
+
 hr {
   height: 2px;
   width: 100%;

@@ -18,7 +18,7 @@
 </head>
 <body class="a11y__page-grid">
 <!-- This snippet loads the custom CSS rules saved in localStorage. It is placed here so that it can be executed as fast as possible to avoid Flash of Unstyles Content. -->
-<script type="text/javascript">(function(){if(localStorage.getItem('a11y_settings')){var cssRules=JSON.parse(localStorage.getItem('a11y_settings'));for(var rule in cssRules){document.documentElement.style.setProperty(rule,cssRules[rule])}; if(a11y) { a11y.savedSettings = cssRules }}}());</script>
+<script type="text/javascript">(function(){if(localStorage.getItem("a11y_settings")){var a=JSON.parse(localStorage.getItem("a11y_settings"));for(var o in a){document.documentElement.style.setProperty(o,a[o]);if(o=="--body-invert"&&a[o]=="100"){document.body.classList.add("dark-mode")}}if(a11y){a11y.o=a}}})();</script>
 
   {{ partial "settings.html" }}
 
