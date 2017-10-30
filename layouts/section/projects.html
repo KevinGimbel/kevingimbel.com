@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+<h1>PROJECTS</h1>
+
 <section class="page wrap" aria-labeldyby="page-title" aria-describedby="page-desc">
   <nav id="post-nav" class="post-nav" role="navigation">
     {{ range (where .Site.Pages "Section" "projects").GroupByParam "language" }}
@@ -12,11 +15,11 @@
         <h3 class="a11y-post-list__section-title" id="title-{{ .Key }}">{{ .Key }}</h3>
         <small>(<a href="#post-nav">Return to navigation</a>)</small>
       </header>
-      <ul class="a11y-post__list">
+      <ul class="a11y-post__list project__list">
         {{ range .Pages }}
         {{ if ne .WordCount  0 }}
-        <li>
-          <article class="a11y-post-list__post" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
+        <li class="project__list-item">
+          <article class="project__list-article" aria-labeldby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
             <header class="a11y-post-list__post-header">
               <h4 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
                 <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">{{ .Title }}</a>

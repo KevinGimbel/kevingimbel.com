@@ -6,3 +6,7 @@
     <p>{{ .Site.Params.Footer.Description | safeHTML }}</p>
   {{ end }}
 </footer>
+
+{{ with .Site.Params.footer.tracking }}
+  {{ . | safeHTML }}
+{{ end }}

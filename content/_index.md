@@ -2,7 +2,7 @@
 title: "Kevin Gimbel - Developer"
 ---
 
-<section class="side-by-side">
+<section class="side-by-side side-by-side__first">
 <div class="small bg">
 <h1>Hi, I'm Kevin Gimbel</h1>
 <h2>I'm a Full-Stack Developer with a strong focus on Front-End Development</h2>

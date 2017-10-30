@@ -44,9 +44,21 @@ permalinks:
 params:
   author:
     name: "Kevin Gimbel"
+    avatar: "/images/avatar-kevingimbel.jpg"
   description: |
-    Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, music, and arts.
+    Full-Stack Developer interested in video games, SciFi, programming, music, and art.
   footer:
-    copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com\">Kevin Gimbel</a>"
+    tracking: |
+      <script type="text/javascript" src="https://www.google-analytics.com/analytics.js" async></script>
+      <script type="text/javascript" async>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-91453548-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com/about\">Kevin Gimbel</a>"
     description: |
-      <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>.</small>
+      <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>. Hosted on <a href="netlify.com">Netlify</a>. <a href="/imprint/" title="Legal information">Imprint</a></small>

@@ -12,7 +12,7 @@ This site is build with [Hugo](http://gohugo.io/), a static site generator by [S
 
 ### Copyright
 
-This site is hosted on [Uberspace](https://uberspace.de), the source code is available at [GitHub](https://github.com/kevingimbel/kevingimbel.com). The source code is free to see and free to use, however, all content is **not** free to re-use, that is everything inside the `content` folder. Scripts published are free to use if not stated otherwise. If there comes a LICENSE file with the repository that license is to be used. Otherwise, everything is released as "DO WHAT YOU WANT" and comes without any warranty.
+This site is hosted on [Netlify](https://netlify.com), the source code is available at [GitHub](https://github.com/kevingimbel/kevingimbel.com). The source code is free to see and free to use, however, all content is **not** free to re-use, that is everything inside the `content` folder. Scripts published are free to use if not stated otherwise. If there comes a LICENSE file with the repository that license is to be used. Otherwise, everything is released as "DO WHAT YOU WANT" and comes without any warranty.
 
 ### Tracking
 
