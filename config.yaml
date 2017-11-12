@@ -46,7 +46,7 @@ params:
     name: "Kevin Gimbel"
     avatar: "/images/avatar-kevingimbel.jpg"
   description: |
-    Full-Stack Developer interested in video games, SciFi, programming, music, and art.
+    Full-Stack Developer interested in video games, SciFi, music, and art.
   footer:
     tracking: |
       <script type="text/javascript" src="https://www.google-analytics.com/analytics.js" async></script>

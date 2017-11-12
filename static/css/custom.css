@@ -15,6 +15,13 @@ body.dark-mode #dark-mode:before {
 .highlight {
   margin-top: 2rem;
 }
+
+p > code {
+  background: #f1f1f1;
+  padding: .15em .35em;
+  border-radius: .3rem;
+}
+
 .side-by-side {
   display: flex;
   flex-direction: row;
@@ -64,17 +71,20 @@ body.homepage {
   padding: 2rem;
 }
 
+.avatar-header {
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
 @media all and (max-width: 50rem) {
   .site-header,
   .content {
     grid-column: 1 / 13;
   }
-}
-
-.avatar-header {
-  max-width: 100%;
-  border-radius: 50%;
-  display: block;
+  .avatar-header {
+    display: none;
+  }
 }
 
 .a11y-nav-main {
@@ -114,7 +124,29 @@ body.homepage {
 
 figure {
   margin-left: -2rem;
+  position: relative;
 }
+
+figure:before {
+  content: "";
+  height: 50%;
+  width: 1px;
+  background: var(--color-accent-secondary);
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  z-index: -1;
+}
+
+figcaption {
+  display: flex;
+  justify-content: flex-end;
+}
+
+figcaption p {
+  width: 50%;
+}
+
 
 .project__list {
   display: flex;
@@ -162,7 +194,11 @@ figure {
   .a11y-site__description {
     display: none;
   }
-
+  .a11y__settings-wrap {
+    width: 90%;
+    left: 2%;
+    top: 1rem;
+  }
   nav.a11y-nav-main__wrap:not(.open) {
     display: none;
   }
@@ -174,7 +210,7 @@ figure {
     right: 0;
     bottom: 0;
     background: #fff;
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
     height: 100vh;
     z-index: 999;
@@ -194,13 +230,24 @@ figure {
   figure {
     margin: 2rem 0;
   }
+
+  .project__list {
+    flex-direction: column;
+  }
+
+  .project__list-item {
+    padding: 1rem 0;
+    max-width: 100%;
+  }
+
 }
 
+/** Highliht styles */
+pre { margin: 0 }
 /**
  * CHROMA Highlightinh styles, generated with
  * `hugo gen chromastyles`
  */
-
 /* Background */ .chroma { background-color: #f0f0f0 }
 /* Error */ .chroma .ss4 {  }
 /* LineHighlight */ .chroma .hl { background-color: #ffffcc; display: block; width: 100% }

@@ -1,5 +1,5 @@
 {{ if not (.IsHome) }}
-  <img class="avatar-header" src="{{ .Site.Params.Author.Avatar }}" alt="Image of {{ .Site.Params.Author.Name }}">
+  <img class="avatar-header" src="{{ .Site.Params.Author.Avatar }}" alt="Picture of the sites' author, {{ .Site.Params.Author.Name }}">
   {{ with .Site.Params.Description }}
     <p class="a11y-site__description">{{ . }}</p>
   {{ end }}

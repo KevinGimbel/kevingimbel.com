@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="a11y-page-single" aria-labelledby="page-title" aria-describedby="page-desc">
   <header class="a11y-page-single__header">
-    <h2 id="page-title">{{ .Title }}</h2>
+    <h1 id="page-title" class="page__title">{{ .Title }}</h1>
   <small>
     {{ if (.Page.Section) "post" }}
       Published on <time>{{ .Date.Format "02 January 2006" }}</time><br>

@@ -11,5 +11,6 @@ Otherwise I am:
 - learning [Go](https://golang.org/) in my free time, see [some code on GitHub](https://github.com/kevingimbel?utf8=%E2%9C%93&tab=repositories&q=&type=&language=go)
 - playing Stardew Valley on Switch
 - helping to develop and maintain [fakedata](https://github.com/lucapette/fakedata), a CLI utility to generate data
+- learning Spanish with Duolingo (¡Yo no hablo español! 😬)
 
 Inspired by [NowNowNow.com](http://nownownow.com/)

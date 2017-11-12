@@ -237,19 +237,23 @@ body.page-settings--open .page-settings {
   padding: .5rem;
   background: #fff;
   border: 2px solid var(--color-accent-primary);
+  z-index: 9999;
 }
 
 .a11y__btn {
+  position: relative;
   background: #fff;
   border: 1px solid #000;
   border-radius: 0;
   font-size: 1rem;
+  box-shadow: 0.15em 0.15em 0 #666;
 }
 
 .a11y__btn:hover {
   background: #000;
   color: #fff;
   cursor: pointer;
+  box-shadow: none;
 }
 
 .a11y__btn-primary {
@@ -279,7 +283,7 @@ body.page-settings--open .page-settings {
 }
 
 .a11y-site__description {
-  font-size: .9rem;
+  font-size: .85rem;
   display: block;
 }
 
@@ -404,6 +408,10 @@ body.page-settings--open .page-settings {
   }
 }
 
+.page__title {
+  font-size: 2.75rem;
+}
+
 figure {
   width: 75%;
   width: 75vw;
@@ -424,6 +432,10 @@ figure img {
   figure {
     width: 110%;
     margin-left: -5%;
+  }
+
+  .page__title {
+    font-size: 1.75rem;
   }
 }
 

@@ -3,7 +3,7 @@
 
     {{ with .Title }}
     <header class="page-header">
-        <h2 id="page-title">{{ . }}</h2>
+        <h1 id="page-title" class="page__title">{{ . }}</h1>
     </header>
     {{ end }}
     {{ with .Content }}
@@ -21,7 +21,7 @@
   {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
     <section id="{{ .Key }}" class="a11y-post-list__wrapper" aria-describedby="desc-{{ .Key }}" aria-labelledby="title-{{ .Key }}">
       <header class="a11y-post-list__section-header">
-        <h3 class="a11y-post-list__section-title" id="title-{{ .Key }}">Posts from {{ .Key }}</h3>
+        <h2 class="a11y-post-list__section-title" id="title-{{ .Key }}">Posts from {{ .Key }}</h2>
         <p id="desc-{{ .Key }}">Below are all posts written in {{ .Key }}.</p>
         <small>(<a href="#post-nav">Return to navigation</a>)</small>
       </header>
@@ -31,9 +31,9 @@
         <li>
           <article class="a11y-post-list__post" aria-labelledby="heading-{{ .UniqueID}}" aria-describedby="description-{{ .UniqueID }}">
             <header class="a11y-post-list__post-header">
-              <h4 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
+              <h3 class="a11y-post-list__post-title" id="heading-{{ .UniqueID }}">
                 <a href="{{ .Permalink }}" title="Continue reading {{ .Title }}">{{ .Title }}</a>
-              </h4>
+              </h3>
               <small>Published on <time>{{ .Date.Format "02 January 2006" }}</time><br>
                 {{ .WordCount }} words. Average read time: {{ .ReadingTime }} minutes.</small>
             </header>
