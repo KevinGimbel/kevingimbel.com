@@ -1,5 +1,6 @@
 ---
 title: "Now"
+menu: "main"
 ---
 
 What am I doing now?

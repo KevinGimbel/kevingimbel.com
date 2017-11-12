@@ -1,5 +1,6 @@
 ---
 title: "About"
+menu: "main"
 ---
 
 Hey! My name is Kevin Gimbel and I am a Full-Stack Developer at [Synoa GmbH](https://synoa.de), focusing on Front-End Development. I enjoy good ~~tea~~ ~~coffee~~ tea and coffee and like to play video games or go to concerts.
