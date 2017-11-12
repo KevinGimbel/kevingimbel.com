@@ -26,14 +26,6 @@ menu:
       URL: "/projects/"
       Weight: 200
 
-    - Name: "About"
-      URL: "/about/"
-      Weight: 300
-
-    - Name: "Now"
-      URL: "/now/"
-      Weight: 1100
-
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
 permalinks:

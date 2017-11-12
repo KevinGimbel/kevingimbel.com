@@ -1,6 +1,10 @@
 ---
 title: "Now"
-menu: "main"
+menu:
+  main:
+    name: "Now"
+    weight: 1100
+
 ---
 
 What am I doing now?
