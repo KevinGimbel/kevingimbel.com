@@ -21,6 +21,6 @@ title: "Kevin Gimbel - Developer"
 </div>
 <div class="small bg">
 <h2>I love Photography!</h2>
-<p>I used to be an active (hobby) photographer and took a lot of pictures. I mostly do on-the-go or travel photography these days and I tent to sell the "better once" (that it, the once <i>I</i> really like) on EyeEm. You can visit my <a href="https://eyeem.com/kevingimbel" title="My EyeEm profile where I share my favorites and sell photographs">EyeEm profile</a> to buy them.</p>
+<p>I used to be an active (hobby) photographer and took a lot of pictures. I mostly do on-the-go or travel photography these days and I tent to sell the "better once" (that is, the once I really like) on EyeEm. You can visit my <a href="https://eyeem.com/kevingimbel" title="My EyeEm profile where I share my favorites and sell photographs">EyeEm profile</a> to buy them.</p>
 </div>
 </section>
