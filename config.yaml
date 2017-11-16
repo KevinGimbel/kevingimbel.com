@@ -1,10 +1,10 @@
-baseurl: "https://kevingimbel.com/"
+baseURL: "https://www.kevingimbel.com"
 languageCode: "en-us"
-theme: "kevingimbel"
+theme: "next"
 title: "Kevin Gimbel — Developer"
 
 PygmentsStyle: "native"
-PygmentsUseClasses: false
+PygmentsUseClasses: true
 PygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
 
@@ -17,7 +17,7 @@ menu:
     - Name: "Home"
       URL: "/"
       Weight: 1
-      
+
     - Name: "Posts"
       URL: "/archive/"
       Weight: 100
@@ -25,14 +25,6 @@ menu:
     - Name: "Projects"
       URL: "/projects/"
       Weight: 200
-
-    - Name: "About"
-      URL: "/about/"
-      Weight: 300
-
-    - Name: "Now"
-      URL: "/now/"
-      Weight: 1100
 
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
@@ -42,5 +34,23 @@ permalinks:
   project: "/projects/:title/"
 
 params:
-  author: "Kevin Gimbel"
-  description: "Developer from Frankfurt, Germany. Interested in video games, SciFi, programming, music, and arts."
+  author:
+    name: "Kevin Gimbel"
+    avatar: "/images/avatar-kevingimbel.jpg"
+  description: |
+    Full-Stack Developer interested in video games, SciFi, music, and art.
+  footer:
+    tracking: |
+      <script type="text/javascript" src="https://www.google-analytics.com/analytics.js" async></script>
+      <script type="text/javascript" async>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-91453548-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com/about\">Kevin Gimbel</a>"
+    description: |
+      <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>. Hosted on <a href="https://www.netlify.com/">Netlify</a>. <a href="/imprint/" title="Legal information">Imprint</a></small>

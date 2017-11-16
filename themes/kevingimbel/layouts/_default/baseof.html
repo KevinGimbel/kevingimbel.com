@@ -31,7 +31,8 @@
       <div class="header-flex">
         <div class="flex-item">
           <h1>Kevin Gimbel</h1>
-          <p class="title-small">Developer &amp; <span id="word_switch">video game enthusiast</span></p>
+          <p class="header__intro-description">is a <b>Full-Stack Developer</b> at <a href="https://synoa.de/" rel="nofollow">Synoa GmbH</a> working Front to Back on Magento Webshops.
+            He's interested in Golang, Music and concerts, and video games.</p>
         </div>
         <div class="flex-item">
           <nav>
@@ -59,5 +60,8 @@
 {{- partial "footer.html" -}}
 {{- partial "tracking.html" -}}
 {{- partial "svg.html" -}}
+{{ range .Page.Params.scripts }}
+<script type="text/javascript" src="{{ . }}"></script>
+{{ end }}
 </body>
 </html>
