@@ -150,7 +150,7 @@
     }
 
     darkModeTrigger.addEventListener('click', function(e) {
-      var el = event.target;
+      var el = e.target;
       if(lsSettings['--body-invert'] == 0 || !lsSettings['--body-invert']) {
         lsSettings['--body-invert'] = 100;
         document.body.classList.add('dark-mode');
