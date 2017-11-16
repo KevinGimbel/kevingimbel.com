@@ -1,8 +1,8 @@
 !(function(window, document, undefined) {
   'use strict';
   var tooltips = [];
-  document.addEventListener('click', function(e) {
-    var element = e.target;
+  document.addEventListener('click', function(event) {
+    var element = event.target;
     var nodeName = element.nodeName.toLowerCase();
     if (nodeName == 'abbr') {
       // TODO: Finish implementation :D
