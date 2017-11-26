@@ -1,9 +1,0 @@
-[11/05/2016] Server setup
-[11/05/2016] Building
-[11/05/2016] fix executable
-[11/05/2016] Change source
-[01/02/2017] Test new deploy script
-[01/02/2017] Re-deploy
-[01/02/2017] FIX wrong variable
-[12/01/2017] Triggering build
-[01/13/2017] Trigger rebuild after building hugo with govendor
