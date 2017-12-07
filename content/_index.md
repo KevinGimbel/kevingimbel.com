@@ -6,7 +6,7 @@ title: "Kevin Gimbel - Developer"
 <div class="small bg">
 <h1>Hi, I'm Kevin Gimbel</h1>
 <h2>I'm a Full-Stack Developer with a strong focus on Front-End Development</h2>
-<p>I like video games and love all kinds of art, from traditional pantings to modern urban art. Art has always been a part of my life, either active or passive.</p>
+<p>I like video games and love all kinds of art, from traditional paintings to modern urban art. Art has always been a part of my life, either active or passive.</p>
 </div>
 
 <div class="wide">
@@ -21,6 +21,6 @@ title: "Kevin Gimbel - Developer"
 </div>
 <div class="small bg">
 <h2>I love Photography!</h2>
-<p>I used to be an active (hobby) photographer and took a lot of pictures. I mostly do on-the-go or travel photography these days and I tent to sell the "better once" (that is, the once I really like) on EyeEm. You can visit my <a href="https://eyeem.com/kevingimbel" title="My EyeEm profile where I share my favorites and sell photographs">EyeEm profile</a> to buy them.</p>
+<p>I used to be an active (hobby) photographer and took a lot of pictures. I mostly do on-the-go or travel photography these days and I tent to sell the "better ones" (that is, the ones I really like) on EyeEm. You can visit my <a href="https://eyeem.com/kevingimbel" title="My EyeEm profile where I share my favorites and sell photographs">EyeEm profile</a> to buy them.</p>
 </div>
 </section>
