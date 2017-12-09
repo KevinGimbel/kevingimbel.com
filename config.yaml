@@ -54,3 +54,8 @@ params:
     copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com/about\">Kevin Gimbel</a>"
     description: |
       <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>. Hosted on <a href="https://www.netlify.com/">Netlify</a>. <a href="/imprint/" title="Legal information">Imprint</a></small>
+  shortcodes:
+    codepen:
+      user: "kevingimbel"
+      preview: true
+      editable: true

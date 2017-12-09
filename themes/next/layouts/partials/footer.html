@@ -10,3 +10,11 @@
 {{ with .Site.Params.footer.tracking }}
   {{ . | safeHTML }}
 {{ end }}
+
+{{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
+<script async src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+{{ end }}
+
+{{ if ($.Page.Scratch.Get "include_codepen") "true" }}
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+{{ end }}
