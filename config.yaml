@@ -57,5 +57,5 @@ params:
   shortcodes:
     codepen:
       user: "kevingimbel"
-      preview: true
+      preview: false
       editable: true
