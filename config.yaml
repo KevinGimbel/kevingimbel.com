@@ -22,6 +22,10 @@ menu:
       URL: "/archive/"
       Weight: 100
 
+    - Name: "Links"
+      URL: "/link/"
+      Weight: 150
+
     - Name: "Projects"
       URL: "/projects/"
       Weight: 200
