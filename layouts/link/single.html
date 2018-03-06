@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="page wrap" aria-labelledby="page-title" aria-describedby="page-desc">
+
+  <header class="page-header">
+    {{ with .Title }}
+      <h1 id="page-title" class="page__title">{{ . }}</h1>
+    {{ end }}
+    {{ with .Page.Params.via }}
+    <small>Found via <a href="{{ .URL }}">{{ .name }}</a></small>
+    {{ end }}
+  </header>
+  <hr>
+  {{ with .Content }}
+  <div class="page-body" id="page-desc">
+    {{ . }}
+  </div>
+  {{ end }}
+</section>
+{{ end }}
