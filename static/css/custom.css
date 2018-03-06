@@ -169,6 +169,13 @@ figcaption p {
   box-shadow: 6px 6px 0 var(--box-shadow-light);
 }
 
+.article-note {
+  display: block;
+  padding: 1.5rem;
+  background: var(--color-accent-secondary);
+  color: var(--color-accent-secondary-fg);
+}
+
 @media all and (max-width: 60rem) {
   .side-by-side {
     flex-direction: column;
