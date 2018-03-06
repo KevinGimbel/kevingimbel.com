@@ -12,6 +12,12 @@
     {{ end }}
   </small>
       <hr>
+      {{ with .Params.note }}
+        <div class="article-note">
+          <p><b>Note:</b>
+          {{ . | markdownify }}</p>
+        </div>
+      {{ end }}
   </header>
   <div class="a11y-page-single__content" id="page-desc">
     {{ .Content }}
