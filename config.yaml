@@ -21,6 +21,10 @@ menu:
     - Name: "Posts"
       URL: "/archive/"
       Weight: 100
+    
+    - Name: "Pixel Art"
+      URL: "/pixelart/"
+      Weight: 130
 
     - Name: "Links"
       URL: "/link/"
