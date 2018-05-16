@@ -3,6 +3,6 @@
   command = "hugo -b=\"https://www.kevingimbel.com\""
 
 [context.production.environment]
-  HUGO_VERSION = "0.31.1"
+  HUGO_VERSION = "0.40.3"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
