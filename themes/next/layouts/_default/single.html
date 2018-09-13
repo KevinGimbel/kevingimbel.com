@@ -19,6 +19,13 @@
         </div>
       {{ end }}
   </header>
+  {{ if (.Page.Section) "post" }}
+  <aside>
+    <details><summary>Table of Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  </aside>
+  {{ end }}
   <div class="a11y-page-single__content" id="page-desc">
     {{ .Content }}
   </div>

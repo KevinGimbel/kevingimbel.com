@@ -1,10 +1,3 @@
-{{ if not (.IsHome) }}
-  <img class="avatar-header" src="{{ .Site.Params.Author.Avatar }}" alt="Picture of the sites' author, {{ .Site.Params.Author.Name }}">
-  {{ with .Site.Params.Description }}
-    <p class="a11y-site__description">{{ . }}</p>
-  {{ end }}
-{{ end }}
-
 <button id="nav-mobile-trigger" class="a11y__btn a11y__btn--medium nav__trigger">MENU</button>
 <nav role="navigation" id="navigation" aria-label="Main Navigation" class="a11y-nav-main__wrap">
   <ul class="a11y-nav-main">
@@ -12,8 +5,8 @@
     {{ range .Site.Menus.main }}
     <li class="a11y-nav-main__nav-item {{if $currentPage.IsMenuCurrent "main" . }} active{{end}}">
       <a href="{{ .URL }}" title="Go to {{ .Name }}">
-        {{ .Pre }}
-          <span>{{ .Name }}</span>
+        <span aria-hidden class="a11y-nav-main__nav-item__icon">{{ .Pre }}</span><!--
+      --><span class="a11y-nav-main__nav-item__label">{{ .Name }}</span>
       </a>
     </li>
     {{end}}

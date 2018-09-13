@@ -315,8 +315,6 @@ body.page-settings--open .page-settings {
 }
 
 .a11y-nav-main__nav-item.active a {
-  font-style: italic;
-  font-weight: bold;
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }

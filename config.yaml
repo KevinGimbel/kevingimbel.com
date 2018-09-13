@@ -17,22 +17,37 @@ menu:
     - Name: "Home"
       URL: "/"
       Weight: 1
+      Pre: 🏡
 
     - Name: "Posts"
       URL: "/archive/"
       Weight: 100
+      Pre: 📰
     
     - Name: "Pixel Art"
       URL: "/pixelart/"
       Weight: 130
+      Pre: 👨‍🎨
 
     - Name: "Links"
       URL: "/link/"
       Weight: 150
+      Pre: 🔗
 
     - Name: "Projects"
       URL: "/projects/"
       Weight: 200
+      Pre: 💻
+
+    - Name: "About"
+      URL: "/about/"
+      Weight: 250
+      Pre: 🧙‍
+
+    - Name: "Now"
+      URL: "/now/"
+      Weight: 300
+      Pre: ⏰
 
 # Set permalinks, they can be content-type based!
 # Reference: http://gohugo.io/extras/permalinks/
