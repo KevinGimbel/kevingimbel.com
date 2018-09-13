@@ -20,15 +20,14 @@ The Source Code can be found [on GitHub.com](https://github.com/kevingimbel/hugo
 The shortcode is fairly simple and requires only one attribute: The link to a single tood, e.g. [https://mastodon.social/@kevingimbel/100700713283716694](https://mastodon.social/@kevingimbel/100700713283716694).
 
 ```
-# Remove the space between "{" and "%" to embed!
-{{ % mastodon status="https://mastodon.social/@kevingimbel/100700713283716694" %}}
+{{%/* mastodon status="https://mastodon.social/@kevingimbel/100700713283716694" */%}}
 ```
 
 Additional parameters:
 
 ```
 # All parameters
-{{ % mastodon status="https://mastodon.social/@kevingimbel/100700713283716694" width="1000" height="500"%}}
+{{%/* mastodon status="https://mastodon.social/@kevingimbel/100700713283716694" width="1000" height="500" */%}}
 ```
 
 Below is a short description for each parameter
