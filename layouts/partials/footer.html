@@ -1,0 +1,25 @@
+<footer class="site-footer" role="contentinfo">
+  {{ if .Site.Params.Footer.Copyright }}
+    <p>{{ .Site.Params.Footer.Copyright | safeHTML }}</p>
+  {{ end }}
+  {{ if .Site.Params.Footer.Description }}
+    <p>{{ .Site.Params.Footer.Description | safeHTML }}</p>
+  {{ end }}
+  <p>Follow me on <a rel="me" href="https://mastodon.social/@kevingimbel">Mastodon @kevingimbel</a></p>
+</footer>
+
+{{ with .Site.Params.footer.tracking }}
+  {{ . | safeHTML }}
+{{ end }}
+
+{{ if ($.Page.Scratch.Get "include_caniuse") "true" }}
+<script async src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+{{ end }}
+
+{{ if ($.Page.Scratch.Get "include_codepen") "true" }}
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+{{ end }}
+
+{{ if ($.Page.Scratch.Get "include_mastodon") "true" }}
+<script src="https://mastodon.social/embed.js" async="async"></script>
+{{ end }}
