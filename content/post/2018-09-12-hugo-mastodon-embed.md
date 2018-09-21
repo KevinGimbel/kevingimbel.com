@@ -17,7 +17,7 @@ Today I made another one which allows embeds from Mastodon, the decentralized Tw
 The Source Code can be found [on GitHub.com](https://github.com/kevingimbel/hugo-shortcodes/tree/master/mastodon)
 ## Configuration
 
-The shortcode is fairly simple and requires only one attribute: The link to a single tood, e.g. [https://mastodon.social/@kevingimbel/100700713283716694](https://mastodon.social/@kevingimbel/100700713283716694).
+The shortcode is fairly simple and requires only one attribute: The link to a single toot, e.g. [https://mastodon.social/@kevingimbel/100700713283716694](https://mastodon.social/@kevingimbel/100700713283716694).
 
 ```
 {{%/* mastodon status="https://mastodon.social/@kevingimbel/100700713283716694" */%}}
