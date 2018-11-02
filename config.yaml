@@ -9,8 +9,53 @@ PygmentsCodeFencesGuessSyntax: true
 PygmentsCodeFences: true
 
 canonifyurls:  true
-
 enableEmoji: true
+
+defaultContentLanguage: en
+languages:
+  en:
+    title: "Kevin Gimbel — Developer"
+    LanguageName: EN
+    weight: 1
+  de:
+    title: "Kevin Gimbel - Programmierer"
+    LanguageName: DE
+    weight: 2
+    params:
+      description: |
+        Full-Stack Developer interested in video games, SciFi, music, and art.
+      footer:
+        copyright: "Inhalte &copy; 2013 - heute <a href=\"https://kevingimbel.com/de/about\">Kevin Gimbel</a>"
+        description: |
+          <small>Diese Website wird mit <a href="https://gohugo.io/" title="Erfahre mehr über Hugo">Hugo</a> erstellt, der Quellcode ist öffentlich auf <a href="https://github.com/kevingimbel/kevingimbel.com" title="Schaue dir den Quellcode dieser Website auf GitHub.com an">GitHub</a> verfügbar. Gehostet wird bei <a href="https://www.netlify.com/">Netlify</a>. <a href="/de/imprint/" title="Rechtliche Informationen">Impressum</a></small>
+        mastodon: |
+          <small>Folge mit auf Mastodon <a rel="me" href="https://bullgit.party/@kevin">@kevin@bullgit.party</a></small>
+    menu:
+      main:
+        - Name: "Start"
+          URL: "/de/"
+          Weight: 1
+          Pre: 🏡
+
+        - Name: "Artikel"
+          URL: "/de/archive/"
+          Weight: 100
+          Pre: 📰
+        
+        - Name: "Pixel Art"
+          URL: "/de/pixelart/"
+          Weight: 130
+          Pre: 👨‍🎨
+
+        - Name: "Über mich"
+          URL: "/de//about/"
+          Weight: 250
+          Pre: 🧙‍
+
+        - Name: "Now"
+          URL: "/de/now/"
+          Weight: 300
+          Pre: ⏰
 
 menu:
   main:
@@ -63,20 +108,12 @@ params:
   description: |
     Full-Stack Developer interested in video games, SciFi, music, and art.
   footer:
-    tracking: |
-      <script type="text/javascript" src="https://www.google-analytics.com/analytics.js" async></script>
-      <script type="text/javascript" async>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-91453548-1', 'auto');
-        ga('send', 'pageview');
-      </script>
     copyright: "Content &copy; 2013 - present by <a href=\"https://kevingimbel.com/about\">Kevin Gimbel</a>"
     description: |
       <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>. Hosted on <a href="https://www.netlify.com/">Netlify</a>. <a href="/imprint/" title="Legal information">Imprint</a></small>
+    mastodon: |
+      <small>Follow me on Mastodon <a rel="me" href="https://bullgit.party/@kevin">@kevin@bullgit.party</a></small>
+
   shortcodes:
     codepen:
       user: "kevingimbel"
