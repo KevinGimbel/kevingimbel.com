@@ -5,7 +5,10 @@
   {{ if .Site.Params.Footer.Description }}
     <p>{{ .Site.Params.Footer.Description | safeHTML }}</p>
   {{ end }}
-  <p>Follow me on <a rel="me" href="https://mastodon.social/@kevingimbel">Mastodon @kevingimbel</a></p>
+
+  {{ if .Site.Params.Footer.Mastodon }}
+    <p>{{ .Site.Params.Footer.Mastodon | safeHTML }}</p>
+  {{ end }}
 </footer>
 
 {{ with .Site.Params.footer.tracking }}
