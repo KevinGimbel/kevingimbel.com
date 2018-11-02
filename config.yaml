@@ -29,7 +29,7 @@ languages:
         description: |
           <small>Diese Website wird mit <a href="https://gohugo.io/" title="Erfahre mehr über Hugo">Hugo</a> erstellt, der Quellcode ist öffentlich auf <a href="https://github.com/kevingimbel/kevingimbel.com" title="Schaue dir den Quellcode dieser Website auf GitHub.com an">GitHub</a> verfügbar. Gehostet wird bei <a href="https://www.netlify.com/">Netlify</a>. <a href="/de/imprint/" title="Rechtliche Informationen">Impressum</a></small>
         mastodon: |
-          <small>Folge mit auf <a rel="me" href="https://mastodon.social/@kevingimbel">Mastodon @kevingimbel</a></small>
+          <small>Folge mit auf Mastodon <a rel="me" href="https://bullgit.party/@kevin">@kevin@bullgit.party</a></small>
     menu:
       main:
         - Name: "Start"
@@ -112,7 +112,7 @@ params:
     description: |
       <small>This website is build with <a href="https://gohugo.io/" title="Learn more about Hugo, a static site generator">Hugo</a>, the source code is hosted on <a href="https://github.com/kevingimbel/kevingimbel.com" title="View the source code of this website">GitHub</a>. Hosted on <a href="https://www.netlify.com/">Netlify</a>. <a href="/imprint/" title="Legal information">Imprint</a></small>
     mastodon: |
-      <small>Follow me on <a rel="me" href="https://mastodon.social/@kevingimbel">Mastodon @kevingimbel</a></small>
+      <small>Follow me on Mastodon <a rel="me" href="https://bullgit.party/@kevin">@kevin@bullgit.party</a></small>
 
   shortcodes:
     codepen:

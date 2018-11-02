@@ -9,7 +9,7 @@ Kevin Gimbel
 Wohnhaft in Wiesbaden, Germany
 ```
 
-Für weitere Informationen schreib mir eine E-Mail an hallo@kevingimbel.com oder schreiben mir auf Mastodon [kevingimbel@mastodon.social](https://mastodon.social/kevingimbel)
+Für weitere Informationen schreib mir eine E-Mail an hallo@kevingimbel.com oder schreiben mir auf Mastodon unter [kevin@bullgit.party](https://bullgit.party/kevin)
 
 ### Technologie
 
@@ -23,4 +23,4 @@ Der Quellcode kann frei verwendet werden um z.B. eine eigene Website zu betreibe
 
 Links und Zitate sind grundsätzlich zulässig. Es dürfen Passagen aus Artikeln zitiert werden, wenn ein Link zurück gesetzt wird.
 
-Im Zweifelsfall bitte per E-Mail an hallo@kevingimbel.com oder per Nachricht auf Mastodon [kevingimbel@mastodon.social](https://mastodon.social/kevingimbel) nachfragen.
+Im Zweifelsfall bitte per E-Mail an hallo@kevingimbel.com oder per Nachricht auf Mastodon unter [kevin@bullgit.party](https://bullgit.party/kevin) nachfragen.

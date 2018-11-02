@@ -4,7 +4,7 @@ title: "Imprint"
 
 Responsible for the content of this site: [Kevin Gimbel](/about/).
 
-Message me at hallo@thissite or hit me up on [kevingimbel@mastodon.social](https://mastodon.social/kevingimbel) if you need to get in contact.
+Message me at hallo@thissite or hit me up on mastodon via [kevin@bullgit.party](https://bullgit.party/kevin) if you need to get in contact.
 
 ### Technology
 
