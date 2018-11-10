@@ -10,7 +10,7 @@
     var lsSettings = localStorage.getItem('a11y_settings') && JSON.parse(localStorage.getItem('a11y_settings')) || {};
     var fontIncreaseBtn = document.querySelector('#font-increase');
     var fontDecreaseBtn = document.querySelector('#font-decrease');
-    var darkModeTrigger = document.querySelector('#dark-mode');
+    // var darkModeTrigger = document.querySelector('#dark-mode');
 
     /**
      * hex2Rgb converts a hex color to RGB for contrast calculation
@@ -149,7 +149,7 @@
       a11y.savedSettings = localStorage.getItem('a11y_settings');
     }
 
-    darkModeTrigger.addEventListener('click', function(e) {
+    /*darkModeTrigger.addEventListener('click', function(e) {
       var el = e.target;
       if(lsSettings['--body-invert'] == 0 || !lsSettings['--body-invert']) {
         lsSettings['--body-invert'] = 100;
@@ -160,7 +160,7 @@
       }
       document.documentElement.style.setProperty('--body-invert', lsSettings['--body-invert']);
       localStorage.setItem('a11y_settings', JSON.stringify(lsSettings));
-    });
+    }); */
 
     populateSettingsFromArray(a11y.savedSettings);
 })(window, document);
