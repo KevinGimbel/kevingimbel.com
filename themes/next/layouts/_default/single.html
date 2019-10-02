@@ -2,28 +2,29 @@
 <section class="a11y-page-single" aria-labelledby="page-title" aria-describedby="page-desc">
   <header class="a11y-page-single__header">
     <h1 id="page-title" class="page__title">{{ .Title }}</h1>
-  <small>
-    {{ if (.Page.Section) "post" }}
+    <small>
+      {{ if (.Page.Section) "post" }}
       Published on <time>{{ .Date.Format "02 January 2006" }}</time><br>
-    {{- with .WordCount -}}
+      {{- with .WordCount -}}
       {{ . }} words.
-    {{- end -}}
-    {{- with .ReadingTime -}} Average read time: {{ . }} minutes.{{- end -}}
-    {{ end }}
-  </small>
-      <hr>
-      {{ with .Params.note }}
-        <div class="article-note">
-          <p><b>Note:</b>
-          {{ . | markdownify }}</p>
-        </div>
+      {{- end -}}
+      {{- with .ReadingTime -}} Average read time: {{ . }} minutes.{{- end -}}
       {{ end }}
+    </small>
+    <hr>
+    {{ with .Params.note }}
+    <div class="article-note">
+      <p><b>Note:</b>
+        {{ . | markdownify }}</p>
+    </div>
+    {{ end }}
   </header>
   {{ if (.Page.Section) "post" }}
   <aside>
-    <details><summary>Table of Contents</summary>
-    {{ .TableOfContents }}
-  </details>
+    <details>
+      <summary>Table of Contents</summary>
+      {{ .TableOfContents }}
+    </details>
   </aside>
   {{ end }}
   <div class="a11y-page-single__content" id="page-desc">
